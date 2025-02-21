@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap')
+
+:root
+  --byz-neume-font-family: NeanesStathisSeries
+  --byz-neume-font-size: 1.44rem
+
+  --byz-lyric-font-family: Ysabeau
+  --byz-lyric-font-size: 1rem
+  --byz-lyric-offset-h: 0.3rem
+  --byz-lyric-offset-v: -0.3rem
+
+  --byz-drop-cap-font-family: Ysabeau
+  --byz-drop-cap-font-size: 2.488rem
+  --byz-drop-cap-offset-v: 2.488rem
+  --byz-drop-cap-color: maroon
+
+  --byz-color-accidental: maroon
+  --byz-color-agogi: maroon
+  --byz-color-barline: maroon
+  --byz-color-fthora: maroon
+  --byz-color-gorgon: maroon
+  --byz-color-heteron: maroon
+  --byz-color-ison-indicator: maroon
+  --byz-color-koronis: maroon
+  --byz-color-martyria: maroon
+  --byz-color-measure-number: maroon
+  --byz-color-note-indicator: maroon
+
+*
+  margin: 0
+  padding: 0
+
+ul
+  list-style-type: none
+
+html
+  font-family: Ysabeau
+  font-size: 18px
+
+body
+  max-width: 1184px
+  @media (max-width: 768px)
+    padding: 24px
+  @media (min-width: 769px)
+    padding: 60px
+
+h1, h2, h3, h4, h5, h6
+  font-family: Ysabeau SC
+  text-align: center
+
+x-ly
+  font-weight: 650
+  color: black
+
+.byz--line-break
+  margin-left: auto
+
+.byz--text-box
+  font-size: 1rem
+  font-weight: 550
+  font-style: italic
+  text-align: right
+  color: black
+
+.byz--mode-key
+  text-align: center
+  color: maroon
+
+.byz--neume-paragraph
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 1rem
