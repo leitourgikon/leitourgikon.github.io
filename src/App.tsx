@@ -1,5 +1,7 @@
+import Liturgy from './liturgy'
+
 function App() {
-  return null
+  return <Liturgy />
 }
 
 export default App
