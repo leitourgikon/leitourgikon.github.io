@@ -14,6 +14,7 @@ function App() {
           <Route path="orthros" element={<Orthros />} />
           <Route path="leitourgia" element={<Leitourgia />} />
           <Route path="bibliotheke" element={<Bibliotheke />} />
+          <Route path="bibliotheke/:chant" element={<Bibliotheke />} />
         </Route>
       </Routes>
     </BrowserRouter>

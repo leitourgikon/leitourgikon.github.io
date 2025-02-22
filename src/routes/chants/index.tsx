@@ -1,11 +1,12 @@
 import React from 'react'
+import type { Echos } from '../echos'
 import C1 from './1'
 
 type Chant = {
   author: string
   title: string
   type: 'litany'
-  echos: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+  echos: Echos
   content: () => React.JSX.Element
 }
 
@@ -14,7 +15,7 @@ const chants: Chant[] = [
     author: 'Прингос',
     title: 'Велика ектения',
     type: 'litany',
-    echos: 8,
+    echos: { mode: 4, plagal: true, base: 'ni' },
     content: C1,
   },
 ]
