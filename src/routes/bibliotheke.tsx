@@ -11,23 +11,25 @@ export default function Component() {
     [chant]
   )
 
-  return index === null ? (
+  return (
     <>
       <h2>Библиотека</h2>
-      <ul className={styles.bibliotheke}>
-        {chants.map((chant, i) => (
-          <li key={i}>
-            <NavLink to={i.toString()}>
-              {chant.author} - {chant.title}, <Echos {...chant.echos} />
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </>
-  ) : (
-    <>
-      <h2>{chants[index].title}</h2>
-      {chants[index].content()}
+      {index === null ? (
+        <ul className={styles.bibliotheke}>
+          {chants.map((chant, i) => (
+            <li key={i}>
+              <NavLink to={i.toString()}>
+                {chant.author} - {chant.title}, <Echos {...chant.echos} />
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <>
+          <h3>{chants[index].title}</h3>
+          {chants[index].content()}
+        </>
+      )}
     </>
   )
 }
