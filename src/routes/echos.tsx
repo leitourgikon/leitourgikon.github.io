@@ -2,7 +2,7 @@ import styles from './echos.module.sass'
 
 export type Echos = {
   mode: 1 | 2 | 4
-  plagal: boolean
+  plagal?: true
   base: 'pa' | 'ga' | 'di' | 'ni'
 }
 

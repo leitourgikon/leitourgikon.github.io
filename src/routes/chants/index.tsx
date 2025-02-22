@@ -26,7 +26,7 @@ const chants: Chant[] = [
     author: 'Прингос',
     title: 'Трисвято и Сила',
     type: 'trisagion',
-    echos: { mode: 2, plagal: false, base: 'di' },
+    echos: { mode: 2, base: 'di' },
     content: C2,
   },
   {
@@ -41,7 +41,7 @@ const chants: Chant[] = [
     author: 'Прингос',
     title: 'С камък запечатан',
     type: 'apolytikion',
-    echos: { mode: 1, plagal: false, base: 'pa' },
+    echos: { mode: 1, base: 'pa' },
     ousynodos: true,
     content: C4,
   },
