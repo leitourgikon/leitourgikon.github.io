@@ -14,13 +14,18 @@ header
         margin-right: auto
         > a
           background: maroon
+          width: 60px
+          height: 60px
           display: flex
           align-items: center
           justify-content: center
-          width: 60px
-          height: 60px
           img
             height: 50px
+
+          @media (max-width: 768px)
+            border-radius: 0 0 2px 0
+          @media (min-width: 768px + 1px)
+            border-radius: 0 0 2px 2px
 
       > li
         > a
