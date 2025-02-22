@@ -1,15 +1,26 @@
 :root
+  --font-size-xs: 0.694rem
+  --font-size-sm: 0.833rem
+  --font-size-md: 1rem
+  --font-size-lg: 1.2rem
+  --font-size-h6: 1.44rem
+  --font-size-h5: 1.728rem
+  --font-size-h4: 2.074rem
+  --font-size-h3: 2.488rem
+  --font-size-h2: 2.488rem
+  --font-size-h1: 2.986rem
+
   --byz-neume-font-family: NeanesStathisSeries
-  --byz-neume-font-size: 1.44rem
+  --byz-neume-font-size: var(--font-size-h5)
 
   --byz-lyric-font-family: Ysabeau
-  --byz-lyric-font-size: 1rem
+  --byz-lyric-font-size: var(--font-size-md)
   --byz-lyric-offset-h: 0.3rem
   --byz-lyric-offset-v: -0.3rem
 
   --byz-drop-cap-font-family: Ysabeau
-  --byz-drop-cap-font-size: 2.488rem
-  --byz-drop-cap-offset-v: 2.488rem
+  --byz-drop-cap-font-size: var(--font-size-h2)
+  --byz-drop-cap-offset-v: var(--font-size-h2)
   --byz-drop-cap-color: maroon
 
   --byz-color-accidental: maroon
@@ -36,7 +47,6 @@ html
   font-family: Ysabeau
   font-size: 18px
   overflow-y: scroll
-
 
 #root
   display: flex
@@ -66,6 +76,18 @@ h1, h2, h3, h4, h5, h6
   font-family: Ysabeau SC
   text-align: center
 
+h1
+  margin-bottom: 24px
+
+h2
+  margin-bottom: 16px
+
+h3
+  margin-bottom: 12px
+
+h4, h5, h6
+  margin-bottom: 6px
+
 x-ly
   font-weight: 650
   color: black
@@ -74,14 +96,14 @@ x-ly
   margin-left: auto
 
 .byz--text-box
-  font-size: 1rem
+  font-size: var(--font-size-md)
   font-weight: 550
   font-style: italic
   text-align: right
   color: black
 
 .byz--text-box.my-byz--note
-  font-size: 0.833rem
+  font-size: var(--font-size-sm)
 
 .byz--text-box.my-byz--title
   font-style: normal
@@ -98,4 +120,4 @@ x-ly
 .byz--neume-paragraph
   display: flex
   flex-wrap: wrap
-  margin-bottom: 1rem
+  margin-bottom: var(--font-size-md)
