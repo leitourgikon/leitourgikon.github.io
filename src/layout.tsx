@@ -8,7 +8,9 @@ export default function Layout() {
         <nav>
           <ul>
             <li>
-              <NavLink to="/">Служебник</NavLink>
+              <NavLink to="/">
+                <img src="/orthodox-cross.svg" />
+              </NavLink>
             </li>
             <li>
               <NavLink to="orthros">Утренна</NavLink>
