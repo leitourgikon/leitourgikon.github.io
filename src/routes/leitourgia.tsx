@@ -1,8 +1,8 @@
-import Litany from './litany'
+import Litany from '../litany'
 
-export default function Liturgy() {
+export default function Component() {
   return (
-    <div>
+    <>
       <h2>Божествена Литургия</h2>
 
       <ul>
@@ -11,6 +11,6 @@ export default function Liturgy() {
           <Litany.Pringos />
         </li>
       </ul>
-    </div>
+    </>
   )
 }

@@ -38,21 +38,29 @@ html
   font-family: Ysabeau
   font-size: 18px
 
-body
+#root
   display: flex
   flex-direction: column
   align-items: center
 
   @media (max-width: 480px)
-    padding: 16px
+    padding: 0
   @media (min-width: 481px) and (max-width: 620px + 2*24px)
-    padding: 24px
+    padding: 0
   @media (min-width: 620px + 2*24px + 1px)
-    padding: 24px 0
+    padding: 0
 
-  > div
+  > header
+    width: 100%
+  > main
     max-width: 620px
     width: 100%
+    @media (max-width: 480px)
+      padding: 16px
+    @media (min-width: 481px) and (max-width: 620px + 2*24px)
+      padding: 24px
+    @media (min-width: 620px + 2*24px + 1px)
+      padding: 24px 0
 
 h1, h2, h3, h4, h5, h6
   font-family: Ysabeau SC
