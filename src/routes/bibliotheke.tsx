@@ -11,6 +11,9 @@ export default function Component() {
     [chant]
   )
 
+  const ousynodosWarning =
+    'Преводът не е синодален и не е препоръчително да се използва за богослужебни цели.'
+
   return (
     <>
       <h2>Библиотека</h2>
@@ -21,12 +24,20 @@ export default function Component() {
               <NavLink to={i.toString()}>
                 {chant.author} - {chant.title}, <Echos {...chant.echos} />
               </NavLink>
+              {chant.ousynodos && (
+                <span className={styles.ousynodos} title={ousynodosWarning}>
+                  не-СП
+                </span>
+              )}
             </li>
           ))}
         </ul>
       ) : (
         <>
           <h3>{chants[index].title}</h3>
+          {chants[index].ousynodos && (
+            <div className={styles.ousynodos}>{ousynodosWarning}</div>
+          )}
           {chants[index].content()}
         </>
       )}

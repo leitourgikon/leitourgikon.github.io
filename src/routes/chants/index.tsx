@@ -10,6 +10,7 @@ type Chant = {
   title: string
   type: 'apolytikion' | 'litany' | 'trisagion'
   echos: Echos
+  ousynodos?: true
   content: () => React.JSX.Element
 }
 
@@ -33,6 +34,7 @@ const chants: Chant[] = [
     title: 'От висотите слезе',
     type: 'apolytikion',
     echos: { mode: 4, plagal: true, base: 'ga' },
+    ousynodos: true,
     content: C3,
   },
   {
@@ -40,6 +42,7 @@ const chants: Chant[] = [
     title: 'С камък запечатан',
     type: 'apolytikion',
     echos: { mode: 1, plagal: false, base: 'pa' },
+    ousynodos: true,
     content: C4,
   },
 ]
