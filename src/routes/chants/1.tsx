@@ -1,4 +1,4 @@
-export default function Pringos() {
+export default function Component() {
   return (
     <div>
       <div className="byz--mode-key">

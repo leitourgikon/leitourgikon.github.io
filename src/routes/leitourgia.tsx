@@ -1,4 +1,4 @@
-import Litany from '../litany'
+import chants from './chants'
 
 export default function Component() {
   return (
@@ -7,8 +7,8 @@ export default function Component() {
 
       <ul>
         <li>
-          <h4>Велика ектения</h4>
-          <Litany.Pringos />
+          <h4>{chants[0].title}</h4>
+          {chants[0].content()}
         </li>
       </ul>
     </>
