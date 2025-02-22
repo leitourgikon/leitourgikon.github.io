@@ -27,6 +27,7 @@
   --byz-color-note-indicator: maroon
 
 *
+  box-sizing: border-box
   margin: 0
   padding: 0
 
@@ -38,11 +39,20 @@ html
   font-size: 18px
 
 body
-  max-width: 1184px
-  @media (max-width: 768px)
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  @media (max-width: 480px)
+    padding: 16px
+  @media (min-width: 481px) and (max-width: 620px + 2*24px)
     padding: 24px
-  @media (min-width: 769px)
-    padding: 60px
+  @media (min-width: 620px + 2*24px + 1px)
+    padding: 24px 0
+
+  > div
+    max-width: 620px
+    width: 100%
 
 h1, h2, h3, h4, h5, h6
   font-family: Ysabeau SC
