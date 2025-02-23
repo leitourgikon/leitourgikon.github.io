@@ -19,18 +19,20 @@ export default function Component() {
       <h2>Библиотека</h2>
       {index === null ? (
         <ul className={styles.bibliotheke}>
-          {chants.map((chant, i) => (
-            <li key={i}>
-              <NavLink to={i.toString()}>
-                {chant.title}, <Echos {...chant.echos} />, {chant.author}
-              </NavLink>
-              {chant.ousynodos && (
-                <span className={styles.ousynodos} title={ousynodosWarning}>
-                  не-СП
-                </span>
-              )}
-            </li>
-          ))}
+          {chants
+            .sort((a, b) => a.title.localeCompare(b.title))
+            .map((chant, i) => (
+              <li key={i}>
+                <NavLink to={i.toString()}>
+                  {chant.title}, <Echos {...chant.echos} />, {chant.author}
+                </NavLink>
+                {chant.ousynodos && (
+                  <span className={styles.ousynodos} title={ousynodosWarning}>
+                    не-СП
+                  </span>
+                )}
+              </li>
+            ))}
         </ul>
       ) : (
         <>
