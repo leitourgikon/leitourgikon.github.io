@@ -14,7 +14,7 @@ export default function Component({ mode, plagal, base }: Echos) {
         {
           1: plagal ? null : <x-mode-first />,
           2: plagal ? null : <x-mode-second />,
-          4: plagal ? <x-mode-plagal-fourth /> : null,
+          4: plagal ? <x-mode-plagal-fourth /> : <x-mode-fourth />,
         }[mode]
       }
       {

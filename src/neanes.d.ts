@@ -51,6 +51,7 @@ declare namespace React {
       'x-mode-di': any
       'x-mode-pa': any
       'x-mode-first': any
+      'x-mode-fourth': any
       'x-mode-ni': any
       'x-mode-plagal': any
       'x-mode-plagal-fourth': any
@@ -75,6 +76,7 @@ declare namespace React {
       'x-p2': any
       'x-p4': any
       'x-psi': any
+      'x-t4': any
       'x-re': any
       'x-var': any
       'x-y': any
