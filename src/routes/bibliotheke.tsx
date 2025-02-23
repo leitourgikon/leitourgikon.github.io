@@ -22,7 +22,7 @@ export default function Component() {
           {chants.map((chant, i) => (
             <li key={i}>
               <NavLink to={i.toString()}>
-                {chant.author} - {chant.title}, <Echos {...chant.echos} />
+                {chant.title}, <Echos {...chant.echos} />, {chant.author}
               </NavLink>
               {chant.ousynodos && (
                 <span className={styles.ousynodos} title={ousynodosWarning}>
