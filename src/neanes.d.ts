@@ -8,21 +8,37 @@ declare namespace React {
       'x-apli': any
       'x-argon': any
       'x-bar-s': any
+      'x-bar-s-a': any
       'x-bar-th-s': any
+      'x-bar-th-s-a': any
+      'x-ch': any
       'x-dc': any
       'x-dg': any
       'x-dgg': any
+      'x-dgg-2': any
       'x-di2': any
       'x-dipli': any
       'x-e': any
       'x-ea': any
       'x-et-c': any
+      'x-f-d-di': any
+      'x-f-d-di-b': any
       'x-f-d-ga': any
+      'x-f-d-ga-b': any
+      'x-f-d-ke': any
+      'x-f-d-ke-b': any
       'x-f-d-ni-low': any
+      'x-f-d-pa': any
+      'x-f-d-pa-b': any
+      'x-f-d-zo-b': any
       'x-f-sc-di': any
+      'x-f-sc-ke-b': any
       'x-g': any
+      'x-g-2': any
       'x-gd': any
       'x-gg': any
+      'x-ggd': any
+      'x-ggg': any
       'x-i': any
       'x-ii-di': any
       'x-ii-ga': any
@@ -33,10 +49,11 @@ declare namespace React {
       'x-kl': any
       'x-kl-b': any
       'x-ko': any
+      'x-l1': any
       'x-ly': any
       'x-m': any
-      'x-m-pa': any
       'x-m-alpha': any
+      'x-m-alpha-aa': any
       'x-m-delta': any
       'x-m-delta-aa': any
       'x-m-di': any
@@ -45,14 +62,17 @@ declare namespace React {
       'x-m-nana': any
       'x-m-ni': any
       'x-m-ni-high': any
+      'x-m-pa': any
+      'x-m-pa-high': any
       'x-m-sc-di': any
       'x-m-vou': any
+      'x-m-vou-high': any
       'x-mel': any
       'x-mode-di': any
-      'x-mode-pa': any
       'x-mode-first': any
       'x-mode-fourth': any
       'x-mode-ni': any
+      'x-mode-pa': any
       'x-mode-plagal': any
       'x-mode-plagal-fourth': any
       'x-mode-second': any
@@ -60,27 +80,35 @@ declare namespace React {
       'x-n': any
       'x-o': any
       'x-o-a-k': any
+      'x-o-e-k': any
       'x-o-i': any
       'x-o-i-k': any
+      'x-o-y-k': any
       'x-o2': any
       'x-o2-m': any
       'x-o2-m-k': any
       'x-o3': any
       'x-o4': any
+      'x-o5': any
+      'x-o6': any
       'x-ok': any
       'x-om': any
       'x-om-c': any
       'x-p': any
       'x-p-a': any
+      'x-p-re': any
       'x-p0': any
       'x-p2': any
+      'x-p3': any
       'x-p4': any
       'x-psi': any
-      'x-t4': any
       'x-re': any
+      'x-stavros': any
+      'x-t4': any
       'x-var': any
       'x-y': any
       'x-yf2': any
+      'x-yfen-below': any
     }
   }
 }

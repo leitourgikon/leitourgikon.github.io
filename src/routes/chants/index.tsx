@@ -5,11 +5,12 @@ import C2 from './2'
 import C3 from './3'
 import C4 from './4'
 import C5 from './5'
+import C6 from './6'
 
 type Chant = {
   author: string
   title: string
-  type: 'apolytikion' | 'kontakion' | 'litany' | 'trisagion'
+  type: 'apolytikion' | 'axion-estin' | 'kontakion' | 'litany' | 'trisagion'
   echos: Echos
   ousynodos?: true
   content: () => React.JSX.Element
@@ -53,6 +54,14 @@ const chants: Chant[] = [
     echos: { mode: 4, base: 'di' },
     ousynodos: true,
     content: C5,
+  },
+  {
+    author: 'Станицас',
+    title: 'Достойно е',
+    type: 'axion-estin',
+    echos: { mode: 21, base: 'di' },
+    ousynodos: true,
+    content: C6,
   },
 ]
 
