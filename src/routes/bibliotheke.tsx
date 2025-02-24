@@ -20,10 +20,11 @@ export default function Component() {
       {index === null ? (
         <ul className={styles.bibliotheke}>
           {chants
-            .sort((a, b) => a.title.localeCompare(b.title))
-            .map((chant, i) => (
-              <li key={i}>
-                <NavLink to={i.toString()}>
+            .map((chant, index) => ({ chant, index }))
+            .sort((a, b) => a.chant.title.localeCompare(b.chant.title))
+            .map(({ chant, index }) => (
+              <li key={index}>
+                <NavLink to={index.toString()}>
                   {chant.title}, <Echos {...chant.echos} />, {chant.author}
                 </NavLink>
                 {chant.ousynodos && (
