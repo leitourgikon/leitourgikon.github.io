@@ -17,6 +17,7 @@ declare namespace React {
       'x-dgg': any
       'x-dgg-2': any
       'x-di2': any
+      'x-diargon': any
       'x-dipli': any
       'x-e': any
       'x-ea': any
@@ -104,6 +105,7 @@ declare namespace React {
       'x-psi': any
       'x-re': any
       'x-stavros': any
+      'x-t2': any
       'x-t4': any
       'x-var': any
       'x-y': any

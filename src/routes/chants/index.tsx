@@ -6,6 +6,7 @@ import C3 from './3'
 import C4 from './4'
 import C5 from './5'
 import C6 from './6'
+import C7 from './7'
 
 type Chant = {
   author: string
@@ -62,6 +63,14 @@ const chants: Chant[] = [
     echos: { mode: 21, base: 'di' },
     ousynodos: true,
     content: C6,
+  },
+  {
+    author: 'Прингос',
+    title: 'Със светиите упокой',
+    type: 'kontakion',
+    echos: { mode: 4, plagal: true, base: 'ga' },
+    ousynodos: true,
+    content: C7,
   },
 ]
 
