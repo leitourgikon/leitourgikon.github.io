@@ -12,7 +12,7 @@ export default function Component({ mode, plagal, base }: Echos) {
       {plagal && <x-mode-plagal />}
       {
         {
-          1: plagal ? null : <x-mode-first />,
+          1: plagal ? <x-mode-plagal-first /> : <x-mode-first />,
           21: plagal ? null : <x-mode-second />,
           2: plagal ? null : <x-mode-second />,
           4: plagal ? <x-mode-plagal-fourth /> : <x-mode-fourth />,

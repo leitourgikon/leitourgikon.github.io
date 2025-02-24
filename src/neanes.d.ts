@@ -22,6 +22,7 @@ declare namespace React {
       'x-e': any
       'x-ea': any
       'x-et-c': any
+      'x-f-agem': any
       'x-f-d-di': any
       'x-f-d-di-b': any
       'x-f-d-ga': any
@@ -75,6 +76,7 @@ declare namespace React {
       'x-mode-ni': any
       'x-mode-pa': any
       'x-mode-plagal': any
+      'x-mode-plagal-first': any
       'x-mode-plagal-fourth': any
       'x-mode-second': any
       'x-mode-word-echos': any
@@ -97,6 +99,7 @@ declare namespace React {
       'x-om-c': any
       'x-p': any
       'x-p-a': any
+      'x-p-e': any
       'x-p-re': any
       'x-p0': any
       'x-p2': any
