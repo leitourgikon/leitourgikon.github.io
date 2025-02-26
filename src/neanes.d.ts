@@ -55,11 +55,13 @@ declare namespace React {
       'x-ly': any
       'x-m': any
       'x-m-alpha': any
+      'x-m-alpha-a': any
       'x-m-alpha-aa': any
       'x-m-delta': any
       'x-m-delta-aa': any
       'x-m-di': any
       'x-m-ga': any
+      'x-m-ke-low': any
       'x-m-legetos': any
       'x-m-nana': any
       'x-m-ni': any
@@ -110,6 +112,7 @@ declare namespace React {
       'x-stavros': any
       'x-t2': any
       'x-t4': any
+      'x-t6': any
       'x-var': any
       'x-y': any
       'x-yf2': any

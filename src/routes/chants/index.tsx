@@ -8,11 +8,18 @@ import C5 from './5'
 import C6 from './6'
 import C7 from './7'
 import C8 from './8'
+import C9 from './9'
 
 type Chant = {
   author: string
   title: string
-  type: 'apolytikion' | 'axion-estin' | 'kontakion' | 'litany' | 'trisagion'
+  type:
+    | 'antifonon'
+    | 'apolytikion'
+    | 'axion-estin'
+    | 'kontakion'
+    | 'litany'
+    | 'trisagion'
   echos: Echos
   ousynodos?: true
   content: () => React.JSX.Element
@@ -80,6 +87,14 @@ const chants: Chant[] = [
     echos: { mode: 1, plagal: true, base: 'pa' },
     ousynodos: true,
     content: C8,
+  },
+  {
+    author: 'Петрос Ламбадариос',
+    title: 'Благославяй, душо моя, Господа',
+    type: 'antifonon',
+    echos: { mode: 4, plagal: true, base: 'ni' },
+    ousynodos: true,
+    content: C9,
   },
 ]
 
