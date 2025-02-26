@@ -1,14 +1,5 @@
+import React from 'react'
 import type { Chant } from '../chant'
-import C1 from './1'
-import C2 from './2'
-import C3 from './3'
-import C4 from './4'
-import C5 from './5'
-import C6 from './6'
-import C7 from './7'
-import C8 from './8'
-import C9 from './9'
-import C10 from './10'
 
 const chants: Chant[] = [
   {
@@ -16,14 +7,14 @@ const chants: Chant[] = [
     title: 'Велика ектения',
     type: 'litany',
     echos: { mode: 4, plagal: true, base: 'ni' },
-    content: C1,
+    content: React.lazy(() => import('./1')),
   },
   {
     author: 'Прингос',
     title: 'Трисвято и Сила',
     type: 'trisagion',
     echos: { mode: 2, base: 'di' },
-    content: C2,
+    content: React.lazy(() => import('./2')),
   },
   {
     author: 'Прингос',
@@ -31,7 +22,7 @@ const chants: Chant[] = [
     type: 'apolytikion',
     echos: { mode: 4, plagal: true, base: 'ga' },
     ousynodos: true,
-    content: C3,
+    content: React.lazy(() => import('./3')),
   },
   {
     author: 'Прингос',
@@ -39,7 +30,7 @@ const chants: Chant[] = [
     type: 'apolytikion',
     echos: { mode: 1, base: 'pa' },
     ousynodos: true,
-    content: C4,
+    content: React.lazy(() => import('./4')),
   },
   {
     author: 'Прингос',
@@ -47,7 +38,7 @@ const chants: Chant[] = [
     type: 'kontakion',
     echos: { mode: 4, base: 'di' },
     ousynodos: true,
-    content: C5,
+    content: React.lazy(() => import('./5')),
   },
   {
     author: 'Станицас',
@@ -55,7 +46,7 @@ const chants: Chant[] = [
     type: 'axion-estin',
     echos: { mode: 21, base: 'di' },
     ousynodos: true,
-    content: C6,
+    content: React.lazy(() => import('./6')),
   },
   {
     author: 'Прингос',
@@ -63,7 +54,7 @@ const chants: Chant[] = [
     type: 'kontakion',
     echos: { mode: 4, plagal: true, base: 'ga' },
     ousynodos: true,
-    content: C7,
+    content: React.lazy(() => import('./7')),
   },
   {
     author: 'Прингос',
@@ -71,7 +62,7 @@ const chants: Chant[] = [
     type: 'apolytikion',
     echos: { mode: 1, plagal: true, base: 'pa' },
     ousynodos: true,
-    content: C8,
+    content: React.lazy(() => import('./8')),
   },
   {
     author: 'Петрос Ламбадариос',
@@ -79,7 +70,7 @@ const chants: Chant[] = [
     type: 'antifonon',
     echos: { mode: 4, plagal: true, base: 'ni' },
     ousynodos: true,
-    content: C9,
+    content: React.lazy(() => import('./9')),
   },
   {
     author: 'Прингос',
@@ -87,7 +78,7 @@ const chants: Chant[] = [
     type: 'apolytikion',
     echos: { mode: 2, base: 'di' },
     ousynodos: true,
-    content: C10,
+    content: React.lazy(() => import('./10')),
   },
 ]
 

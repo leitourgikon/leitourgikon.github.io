@@ -15,7 +15,7 @@ export type Chant = {
     | 'trisagion'
   echos: Echos
   ousynodos?: true
-  content: () => React.JSX.Element
+  content: React.LazyExoticComponent<() => React.JSX.Element>
 }
 
 export default function Component({ title, ousynodos, content }: Chant) {
@@ -23,7 +23,9 @@ export default function Component({ title, ousynodos, content }: Chant) {
     <>
       {ousynodos && <div className={styles.ousynodos}>{OUSYNODOS_WARNING}</div>}
       <h3>{title}</h3>
-      {content()}
+      <React.Suspense fallback={<div>Зареждане...</div>}>
+        {React.createElement(content, {})}
+      </React.Suspense>
     </>
   )
 }
