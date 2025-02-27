@@ -21,8 +21,8 @@ export type Chant = {
 export default function Component({ title, ousynodos, content }: Chant) {
   return (
     <>
-      <h3>{title}</h3>
       {ousynodos && <div className={styles.ousynodos}>{OUSYNODOS_WARNING}</div>}
+      <h3>{title}</h3>
       {content()}
     </>
   )

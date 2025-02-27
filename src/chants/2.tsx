@@ -295,7 +295,7 @@ export default function Component() {
         <div className="byz--line-break"></div>
       </div>
       <div className="byz--text-box my-byz--note">(два пъти)</div>
-      <div className="byz--text-box my-byz--title">Третият</div>
+      <h4>Третият</h4>
       <div className="byz--neume-paragraph">
         <x-m className="byz--m-align-right">
           <x-m-di></x-m-di>
@@ -856,7 +856,7 @@ export default function Component() {
         </x-m>
         <div className="byz--line-break"></div>
       </div>
-      <div className="byz--text-box my-byz--title">Сила</div>
+      <h4>Сила</h4>
       <div className="byz--neume-paragraph">
         <x-dc>N</x-dc>
         <x-n>

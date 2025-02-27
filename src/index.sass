@@ -1,26 +1,15 @@
 :root
-  --font-size-xs: 0.694rem
-  --font-size-sm: 0.833rem
-  --font-size-md: 1rem
-  --font-size-lg: 1.2rem
-  --font-size-h6: 1.44rem
-  --font-size-h5: 1.728rem
-  --font-size-h4: 2.074rem
-  --font-size-h3: 2.488rem
-  --font-size-h2: 2.488rem
-  --font-size-h1: 2.986rem
-
   --byz-neume-font-family: NeanesStathisSeries
-  --byz-neume-font-size: var(--font-size-h5)
+  --byz-neume-font-size: 1.6rem
 
   --byz-lyric-font-family: Ysabeau
-  --byz-lyric-font-size: var(--font-size-md)
+  --byz-lyric-font-size: 1rem
   --byz-lyric-offset-h: 0.3rem
-  --byz-lyric-offset-v: -0.3rem
+  --byz-lyric-offset-v: -0.6rem
 
   --byz-drop-cap-font-family: Ysabeau
-  --byz-drop-cap-font-size: var(--font-size-h2)
-  --byz-drop-cap-offset-v: var(--font-size-h2)
+  --byz-drop-cap-font-size: 2.7rem
+  --byz-drop-cap-offset-v: 2.4rem
   --byz-drop-cap-color: maroon
 
   --byz-color-accidental: maroon
@@ -74,19 +63,29 @@ html
 
 h1, h2, h3, h4, h5, h6
   font-family: Ysabeau SC
+
+h1, h2, h3, h4
   text-align: center
 
 h1
-  margin-bottom: 24px
+  font-size: 2rem
+  font-weight: 620
+  margin: 1rem 0
 
 h2
-  margin-bottom: 16px
+  font-size: 1.6rem
+  font-weight: 640
+  margin: 0.8rem 0
 
 h3
-  margin-bottom: 12px
+  font-size: 1.28rem
+  font-weight: 660
+  margin: 0.64rem 0
 
-h4, h5, h6
-  margin-bottom: 6px
+h4
+  font-size: 1.024rem
+  font-weight: 680
+  margin: 0.512rem 0
 
 x-ly
   font-weight: 650
@@ -96,8 +95,8 @@ x-ly
   margin-left: auto
 
 .byz--text-box
-  font-size: var(--font-size-md)
-  font-weight: 550
+  font-size: 1.024rem
+  font-weight: 650
   font-style: italic
   text-align: right
   color: black
@@ -106,11 +105,7 @@ x-ly
   text-align: left
 
 .byz--text-box.my-byz--note
-  font-size: var(--font-size-sm)
-
-.byz--text-box.my-byz--title
-  font-style: normal
-  text-align: center
+  font-size: 0.819rem
 
 .byz--m-align-right
   margin-left: auto
@@ -122,4 +117,4 @@ x-ly
 .byz--neume-paragraph
   display: flex
   flex-wrap: wrap
-  margin-bottom: var(--font-size-md)
+  margin-bottom: 0.2rem
