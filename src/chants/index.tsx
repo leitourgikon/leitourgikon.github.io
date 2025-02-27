@@ -1,5 +1,4 @@
-import React from 'react'
-import type { Echos } from '../echos'
+import type { Chant } from '../chant'
 import C1 from './1'
 import C2 from './2'
 import C3 from './3'
@@ -10,21 +9,6 @@ import C7 from './7'
 import C8 from './8'
 import C9 from './9'
 import C10 from './10'
-
-type Chant = {
-  author: string
-  title: string
-  type:
-    | 'antifonon'
-    | 'apolytikion'
-    | 'axion-estin'
-    | 'kontakion'
-    | 'litany'
-    | 'trisagion'
-  echos: Echos
-  ousynodos?: true
-  content: () => React.JSX.Element
-}
 
 const chants: Chant[] = [
   {

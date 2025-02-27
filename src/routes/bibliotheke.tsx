@@ -1,7 +1,9 @@
 import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-import chants from './chants'
-import Echos from './echos'
+import Chant from '../chant'
+import chants from '../chants'
+import { OUSYNODOS_WARNING } from '../constants'
+import Echos from '../echos'
 import styles from './bibliotheke.module.sass'
 
 export default function Component() {
@@ -10,9 +12,6 @@ export default function Component() {
     () => (chant && !isNaN(Number(chant)) ? Number(chant) : null),
     [chant]
   )
-
-  const ousynodosWarning =
-    'Преводът не е синодален и не е препоръчително да се използва за богослужебни цели.'
 
   return (
     <>
@@ -28,7 +27,7 @@ export default function Component() {
                   {chant.title}, <Echos {...chant.echos} />, {chant.author}
                 </NavLink>
                 {chant.ousynodos && (
-                  <span className={styles.ousynodos} title={ousynodosWarning}>
+                  <span className={styles.ousynodos} title={OUSYNODOS_WARNING}>
                     не-СП
                   </span>
                 )}
@@ -36,13 +35,7 @@ export default function Component() {
             ))}
         </ul>
       ) : (
-        <>
-          <h3>{chants[index].title}</h3>
-          {chants[index].ousynodos && (
-            <div className={styles.ousynodos}>{ousynodosWarning}</div>
-          )}
-          {chants[index].content()}
-        </>
+        <Chant {...chants[index]} />
       )}
     </>
   )
