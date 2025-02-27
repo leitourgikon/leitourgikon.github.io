@@ -292,7 +292,6 @@ export default function Component() {
           <x-m-di></x-m-di>
           <x-m-sc-di></x-m-sc-di>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--text-box my-byz--note">(два пъти)</div>
       <h4>Третият</h4>
@@ -559,7 +558,6 @@ export default function Component() {
           <x-m-di></x-m-di>
           <x-m-sc-di></x-m-sc-di>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--neume-paragraph">
         <x-dc>С</x-dc>
@@ -641,7 +639,6 @@ export default function Component() {
           <x-m-di></x-m-di>
           <x-m-sc-di></x-m-sc-di>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--neume-paragraph">
         <x-dc>И</x-dc>
@@ -723,7 +720,6 @@ export default function Component() {
           <x-m-di></x-m-di>
           <x-m-sc-di></x-m-sc-di>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--neume-paragraph">
         <x-dc>С</x-dc>
@@ -854,7 +850,6 @@ export default function Component() {
           <x-m-di></x-m-di>
           <x-m-sc-di></x-m-sc-di>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <h4>Сила</h4>
       <div className="byz--neume-paragraph">
@@ -935,7 +930,6 @@ export default function Component() {
           <x-m-di></x-m-di>
           <x-m-sc-di></x-m-sc-di>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
     </div>
   )

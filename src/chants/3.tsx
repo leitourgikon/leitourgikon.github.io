@@ -298,7 +298,6 @@ export default function Component() {
           <x-m-ga></x-m-ga>
           <x-m-delta></x-m-delta>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
     </div>
   )

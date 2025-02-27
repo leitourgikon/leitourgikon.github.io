@@ -552,7 +552,6 @@ export default function Component() {
           <x-m-pa></x-m-pa>
           <x-m-alpha></x-m-alpha>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
     </div>
   )

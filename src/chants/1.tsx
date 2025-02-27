@@ -63,7 +63,6 @@ export default function Component() {
           <x-m-ni></x-m-ni>
           <x-m-delta></x-m-delta>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--neume-paragraph">
         <x-dc>Г</x-dc>
@@ -123,7 +122,6 @@ export default function Component() {
           <x-m-vou></x-m-vou>
           <x-m-legetos></x-m-legetos>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--neume-paragraph">
         <x-dc>Г</x-dc>
@@ -174,7 +172,6 @@ export default function Component() {
           <x-m-di></x-m-di>
           <x-m-delta-aa></x-m-delta-aa>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--neume-paragraph">
         <x-dc>Г</x-dc>
@@ -227,7 +224,6 @@ export default function Component() {
           <x-m-ni-high></x-m-ni-high>
           <x-m-nana></x-m-nana>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--neume-paragraph">
         <x-dc>Г</x-dc>
@@ -279,7 +275,6 @@ export default function Component() {
           <x-m-ni></x-m-ni>
           <x-m-delta></x-m-delta>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--neume-paragraph">
         <x-dc>Г</x-dc>
@@ -327,7 +322,6 @@ export default function Component() {
           <x-m-ni></x-m-ni>
           <x-m-delta></x-m-delta>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
     </div>
   )

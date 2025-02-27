@@ -270,7 +270,6 @@ export default function Component() {
           <x-m-di></x-m-di>
           <x-m-delta-aa></x-m-delta-aa>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
       <div className="byz--text-box my-byz--description">краят е такъв</div>
       <div className="byz--neume-paragraph">
@@ -353,7 +352,6 @@ export default function Component() {
           <x-m-pa></x-m-pa>
           <x-m-alpha></x-m-alpha>
         </x-m>
-        <div className="byz--line-break"></div>
       </div>
     </div>
   )
