@@ -14,12 +14,6 @@ export default function Layout() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="orthros">Утренна</NavLink>
-            </li>
-            <li>
-              <NavLink to="leitourgia">Литургия</NavLink>
-            </li>
-            <li>
               <NavLink to="bibliotheke">Библиотека</NavLink>
             </li>
           </ul>
