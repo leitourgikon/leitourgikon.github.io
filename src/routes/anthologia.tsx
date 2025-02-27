@@ -27,7 +27,7 @@ export default function Component() {
   const [collectionMenu, setCollectionMenu] = React.useState(false)
 
   return index === null ? (
-    <>
+    <div className={styles.collections}>
       <h2>Сборници</h2>
       <ul className={listStyles.list}>
         {collections
@@ -36,6 +36,15 @@ export default function Component() {
           .map(({ collection, index }) => (
             <li key={index}>
               <NavLink to={index.toString()}>{collection.title}</NavLink>
+              <span
+                role="button"
+                title={`Изтрий сборника „${collection.title}“`}
+                onClick={() =>
+                  setCollections(collections.filter((_, i) => i !== index))
+                }
+              >
+                -
+              </span>
             </li>
           ))}
         <li>
@@ -50,7 +59,7 @@ export default function Component() {
           onSave={(collection) => setCollections([...collections, collection])}
         />
       )}
-    </>
+    </div>
   ) : (
     <>
       <h2>{collections[index].title}</h2>
