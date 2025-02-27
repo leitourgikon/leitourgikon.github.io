@@ -18,7 +18,11 @@ export default function Component() {
       collection && !isNaN(Number(collection)) ? Number(collection) : null,
     [collection]
   )
-  const [collections, setCollections] = React.useState<Collection[]>([])
+  const [collections, setCollections] = React.useState<Collection[]>(() =>
+    getLocalStorageCollections()
+  )
+
+  React.useEffect(() => setLocalStorageCollections(collections), [collections])
 
   const [collectionMenu, setCollectionMenu] = React.useState(false)
 
@@ -59,6 +63,24 @@ export default function Component() {
       </ul>
     </>
   )
+}
+
+function getLocalStorageCollections() {
+  const collections = localStorage.getItem('anthologia')
+  if (!collections) return []
+
+  try {
+    const parsed = JSON.parse(collections)
+    if (parsed?.length) return parsed
+  } catch (err) {
+    console.error('Error while loading anthologia:', err)
+  }
+
+  return []
+}
+
+function setLocalStorageCollections(collections: Collection[]) {
+  localStorage.setItem('anthologia', JSON.stringify(collections))
 }
 
 function CollectionMenu({
