@@ -296,12 +296,6 @@ export default function Component() {
       <div className="byz--text-box my-byz--note">(два пъти)</div>
       <h4>Третият</h4>
       <div className="byz--neume-paragraph">
-        <x-m className="byz--m-align-right">
-          <x-m-di></x-m-di>
-          <x-m-sc-di></x-m-sc-di>
-        </x-m>
-      </div>
-      <div className="byz--neume-paragraph">
         <x-dc>С</x-dc>
         <x-n>
           <x-bar-s></x-bar-s>

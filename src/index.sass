@@ -104,14 +104,16 @@ x-ly
 .byz--text-box.my-byz--note
   font-size: 0.819rem
 
-.byz--m-align-right
-  margin-left: auto
-
 .byz--mode-key
   text-align: center
   color: maroon
 
 .byz--neume-paragraph
-  display: flex
+  display: inline-flex
   flex-wrap: wrap
   margin-bottom: 0.2rem
+  x-m:last-child
+    margin-left: auto
+
+.byz--neume-paragraph.my-byz--line
+  display: flex

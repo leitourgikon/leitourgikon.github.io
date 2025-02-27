@@ -23,6 +23,8 @@ export default function Component() {
           <x-m-ni></x-m-ni>
           <x-m-delta></x-m-delta>
         </x-m>
+      </div>
+      <div className="byz--neume-paragraph my-byz--line">
         <x-t6 className="byz--t"></x-t6>
       </div>
       <div className="byz--neume-paragraph">
@@ -3291,6 +3293,8 @@ export default function Component() {
           <x-m-ni></x-m-ni>
           <x-m-delta></x-m-delta>
         </x-m>
+      </div>
+      <div className="byz--neume-paragraph my-byz--line">
         <x-t4 className="byz--t"></x-t4>
       </div>
       <div className="byz--neume-paragraph">
