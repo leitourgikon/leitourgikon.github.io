@@ -2,3 +2,43 @@
   display: flex
   flex-direction: column
   gap: 30px
+
+.collection
+  background: white
+  border-radius: 4px 0 0 4px
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)
+  position: absolute
+  top: 0
+  right: 0
+
+  height: 100%
+  display: flex
+  flex-direction: column
+  padding: 15px
+
+  @media (max-width: 480px)
+    width: 100%
+  @media (min-width: 480px + 1)
+    width: 360px
+
+  input
+    font-family: Ysabeau SC
+    font-size: 1.024rem
+    font-weight: 680
+    margin: 0.512rem 0
+    text-align: center
+    border: none
+    width: 100%
+    padding: 0
+    margin: 0
+    outline: none
+
+  .actions
+    margin-top: auto
+    display: flex
+    justify-content: space-between
+
+    span[role="button"]
+      cursor: pointer
+      &:hover
+        color: maroon

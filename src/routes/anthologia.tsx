@@ -26,6 +26,8 @@ export default function Component() {
   )
   const [collections] = React.useState<Collection[]>(COLLECTIONS)
 
+  const [collectionMenu, setCollectionMenu] = React.useState(false)
+
   return index === null ? (
     <>
       <h2>Сборници</h2>
@@ -38,7 +40,15 @@ export default function Component() {
               <NavLink to={index.toString()}>{collection.title}</NavLink>
             </li>
           ))}
+        <li>
+          <span role="button" onClick={() => setCollectionMenu(true)}>
+            + Нов сборник
+          </span>
+        </li>
       </ul>
+      {collectionMenu && (
+        <CollectionMenu onClose={() => setCollectionMenu(false)} />
+      )}
     </>
   ) : (
     <>
@@ -51,5 +61,28 @@ export default function Component() {
         ))}
       </ul>
     </>
+  )
+}
+
+function CollectionMenu({ onClose }: { onClose: () => void }) {
+  const [title, setTitle] = React.useState('Нов сборник')
+
+  return (
+    <div className={styles.collection}>
+      <h4>
+        <input
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          autoFocus
+        />
+      </h4>
+      <div className={styles.actions}>
+        <span role="button" onClick={onClose}>
+          Затвори
+        </span>
+        <span role="button">Запази</span>
+      </div>
+    </div>
   )
 }
