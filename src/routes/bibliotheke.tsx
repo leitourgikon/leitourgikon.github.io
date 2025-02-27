@@ -5,6 +5,7 @@ import chants from '../chants'
 import { OUSYNODOS_WARNING } from '../constants'
 import Echos from '../echos'
 import styles from './bibliotheke.module.sass'
+import listStyles from '../list.module.sass'
 
 export default function Component() {
   const { chant } = useParams()
@@ -17,7 +18,7 @@ export default function Component() {
     <>
       <h2>Библиотека</h2>
       {index === null ? (
-        <ul className={styles.bibliotheke}>
+        <ul className={listStyles.list}>
           {chants
             .map((chant, index) => ({ chant, index }))
             .sort((a, b) => a.chant.title.localeCompare(b.chant.title))
