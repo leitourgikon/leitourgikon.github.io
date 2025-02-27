@@ -11,13 +11,6 @@ type Collection = {
   content: number[]
 }
 
-const COLLECTIONS = [
-  {
-    title: 'Литургия',
-    content: [0, 8, 1, 5],
-  },
-]
-
 export default function Component() {
   const { collection } = useParams()
   const index = React.useMemo(
@@ -25,7 +18,7 @@ export default function Component() {
       collection && !isNaN(Number(collection)) ? Number(collection) : null,
     [collection]
   )
-  const [collections] = React.useState<Collection[]>(COLLECTIONS)
+  const [collections, setCollections] = React.useState<Collection[]>([])
 
   const [collectionMenu, setCollectionMenu] = React.useState(false)
 
@@ -48,7 +41,10 @@ export default function Component() {
         </li>
       </ul>
       {collectionMenu && (
-        <CollectionMenu onClose={() => setCollectionMenu(false)} />
+        <CollectionMenu
+          onClose={() => setCollectionMenu(false)}
+          onSave={(collection) => setCollections([...collections, collection])}
+        />
       )}
     </>
   ) : (
@@ -65,7 +61,13 @@ export default function Component() {
   )
 }
 
-function CollectionMenu({ onClose }: { onClose: () => void }) {
+function CollectionMenu({
+  onClose,
+  onSave,
+}: {
+  onClose: () => void
+  onSave: (collection: Collection) => void
+}) {
   const [title, setTitle] = React.useState('Нов сборник')
   const [collection, setCollection] = React.useState<number[]>([])
   const [chantsMenu, setChantsMenu] = React.useState(false)
@@ -105,7 +107,15 @@ function CollectionMenu({ onClose }: { onClose: () => void }) {
         <span role="button" onClick={onClose}>
           Затвори
         </span>
-        <span role="button">Запази</span>
+        <span
+          role="button"
+          onClick={() => {
+            onSave({ title, content: collection })
+            onClose()
+          }}
+        >
+          Запази
+        </span>
       </div>
       {chantsMenu && (
         <ChantsMenu
