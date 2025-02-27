@@ -259,7 +259,7 @@ export default function Component() {
           <x-var></x-var>
           <x-o></x-o>
           <x-om-c></x-om-c>
-          <x-ly>Го</x-ly>
+          <x-ly>Гос</x-ly>
           <x-mel a h></x-mel>
         </x-n>
         <x-n>
@@ -267,7 +267,7 @@ export default function Component() {
         </x-n>
         <x-n>
           <x-ea></x-ea>
-          <x-ly>спо</x-ly>
+          <x-ly>по</x-ly>
           <x-mel a h></x-mel>
         </x-n>
         <x-n>
