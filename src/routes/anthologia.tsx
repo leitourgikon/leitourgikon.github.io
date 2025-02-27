@@ -81,10 +81,18 @@ function CollectionMenu({ onClose }: { onClose: () => void }) {
         />
       </h4>
       <ul className={listStyles.list}>
-        {collection.map((index) => (
-          <li key={index}>
+        {collection.map((index, order) => (
+          <li key={`${index}-${order}`}>
             {chants[index].title}, <Echos {...chants[index].echos} />,{' '}
             {chants[index].author}
+            <span
+              role="button"
+              onClick={() =>
+                setCollection(collection.filter((_, i) => i !== order))
+              }
+            >
+              -
+            </span>
           </li>
         ))}
         <li>
