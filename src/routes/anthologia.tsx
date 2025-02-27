@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import Chant from '../chant'
 import chants from '../chants'
+import Echos from '../echos'
 import styles from './anthologia.module.sass'
 import listStyles from '../list.module.sass'
 
@@ -66,6 +67,8 @@ export default function Component() {
 
 function CollectionMenu({ onClose }: { onClose: () => void }) {
   const [title, setTitle] = React.useState('Нов сборник')
+  const [collection, setCollection] = React.useState<number[]>([])
+  const [chantsMenu, setChantsMenu] = React.useState(false)
 
   return (
     <div className={styles.collection}>
@@ -77,11 +80,66 @@ function CollectionMenu({ onClose }: { onClose: () => void }) {
           autoFocus
         />
       </h4>
+      <ul className={listStyles.list}>
+        {collection.map((index) => (
+          <li key={index}>
+            {chants[index].title}, <Echos {...chants[index].echos} />,{' '}
+            {chants[index].author}
+          </li>
+        ))}
+        <li>
+          <span role="button" onClick={() => setChantsMenu(true)}>
+            + Добави
+          </span>
+        </li>
+      </ul>
       <div className={styles.actions}>
         <span role="button" onClick={onClose}>
           Затвори
         </span>
         <span role="button">Запази</span>
+      </div>
+      {chantsMenu && (
+        <ChantsMenu
+          onAdd={(index) => setCollection([...collection, index])}
+          onClose={() => setChantsMenu(false)}
+        />
+      )}
+    </div>
+  )
+}
+
+function ChantsMenu({
+  onAdd,
+  onClose,
+}: {
+  onAdd: (index: number) => void
+  onClose: () => void
+}) {
+  return (
+    <div className={styles.chants}>
+      <ul className={listStyles.list}>
+        {chants
+          .map((chant, index) => ({ chant, index }))
+          .sort((a, b) => a.chant.title.localeCompare(b.chant.title))
+          .map(({ chant, index }) => (
+            <li key={index}>
+              <span
+                role="button"
+                onClick={() => {
+                  onAdd(index)
+                  onClose()
+                }}
+              >
+                {chant.title}, <Echos {...chant.echos} />, {chant.author}
+              </span>
+            </li>
+          ))}
+      </ul>
+      <div className={styles.actions}>
+        <span role="button" onClick={onClose}>
+          Затвори
+        </span>
       </div>
     </div>
   )
