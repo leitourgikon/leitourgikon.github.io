@@ -16,6 +16,9 @@ export default function Layout() {
             <li>
               <NavLink to="bibliotheke">Библиотека</NavLink>
             </li>
+            <li>
+              <NavLink to="anthologia">Сборници</NavLink>
+            </li>
           </ul>
         </nav>
       </header>
