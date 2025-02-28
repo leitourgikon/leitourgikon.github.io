@@ -39,9 +39,27 @@
         color: maroon
 
 .collections, .collection
-  > ul > li:not(:last-child) > span[role="button"]
-    padding: 5px
-    margin-left: auto
+  > ul
+    > li:not(:last-child) > span[role="button"]
+      padding: 5px
+      margin-left: auto
+
+    > li:last-child:not(:first-child)
+      margin-top: 8px
+
+.collection
+  > ul
+    &:active
+      cursor: move
+    > li:first-child:not(:last-child)
+      margin-top: 8px
+    > li:not(:last-child)
+      cursor: move
+      user-select: none
+      &[aria-pressed="true"]
+        background: white
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)
+        transition: box-shadow 0.15s ease
 
 .anthologion
   display: flex

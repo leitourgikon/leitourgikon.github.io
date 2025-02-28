@@ -103,8 +103,18 @@ function CollectionMenu({
   const [collection, setCollection] = React.useState<number[]>([])
   const [chantsMenu, setChantsMenu] = React.useState(false)
 
+  const [draggedItem, setDraggedItem] = React.useState<{
+    index: number
+    height: number
+    li: HTMLLIElement
+  }>()
+
   return (
-    <div className={styles.collection}>
+    <div
+      className={styles.collection}
+      onPointerLeave={() => setDraggedItem(undefined)}
+      onPointerUp={() => setDraggedItem(undefined)}
+    >
       <h4>
         <input
           type="text"
@@ -114,14 +124,49 @@ function CollectionMenu({
         />
       </h4>
       <ul className={listStyles.list}>
-        {collection.map((index, order) => (
-          <li key={`${index}-${order}`}>
-            {chants[index].title}, <Echos {...chants[index].echos} />,{' '}
-            {chants[index].author}
+        {collection.map((index, i) => (
+          <li
+            key={`${index}-${i}`}
+            aria-pressed={draggedItem?.index === i}
+            onPointerDown={(e) =>
+              setDraggedItem({
+                index: i,
+                height: e.currentTarget.clientHeight,
+                li: e.currentTarget,
+              })
+            }
+            onPointerMove={(e) => {
+              if (draggedItem === undefined || draggedItem.index === i) return
+              const targetY =
+                e.clientY - e.currentTarget.getBoundingClientRect().top
+              const offset = e.currentTarget.clientHeight - draggedItem.height
+
+              if (draggedItem.index < i && targetY < offset) return
+              if (
+                draggedItem.index > i &&
+                offset > 0 &&
+                targetY > draggedItem.height
+              )
+                return
+
+              const ix = Math.min(draggedItem.index, i)
+              setDraggedItem({ ...draggedItem, index: i })
+              setCollection([
+                ...collection.slice(0, ix),
+                collection[ix + 1],
+                collection[ix],
+                ...collection.slice(ix + 2),
+              ])
+            }}
+          >
+            <div>
+              {chants[index].title}, <Echos {...chants[index].echos} />,{' '}
+              {chants[index].author}
+            </div>
             <span
               role="button"
               onClick={() =>
-                setCollection(collection.filter((_, i) => i !== order))
+                setCollection(collection.filter((_, j) => j !== i))
               }
             >
               -
