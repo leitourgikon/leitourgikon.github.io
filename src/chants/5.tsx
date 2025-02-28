@@ -446,12 +446,10 @@ export default function Component() {
         </x-n>
         <x-n>
           <x-a></x-a>
-          <x-ly>на</x-ly>
         </x-n>
         <x-n>
           <x-a></x-a>
-          <x-ly>у</x-ly>
-          <x-mel a h></x-mel>
+          <x-ly>на</x-ly>
         </x-n>
         <x-n>
           <x-o></x-o>
@@ -473,6 +471,36 @@ export default function Component() {
           <x-i></x-i>
           <x-kl></x-kl>
           <x-ly>е</x-ly>
+        </x-n>
+        <x-m>
+          <x-m-di></x-m-di>
+          <x-m-sc-di></x-m-sc-di>
+        </x-m>
+        <x-n>
+          <x-i></x-i>
+          <x-ly>Бо</x-ly>
+          <x-mel a h></x-mel>
+        </x-n>
+        <x-n>
+          <x-o></x-o>
+          <x-ly>го</x-ly>
+          <x-mel a h></x-mel>
+        </x-n>
+        <x-n>
+          <x-bar-s></x-bar-s>
+          <x-p></x-p>
+          <x-kl-b></x-kl-b>
+          <x-ly>ро</x-ly>
+          <x-mel a h></x-mel>
+        </x-n>
+        <x-n>
+          <x-a></x-a>
+          <x-ly>ди</x-ly>
+          <x-mel a h></x-mel>
+        </x-n>
+        <x-n>
+          <x-a></x-a>
+          <x-ly>це</x-ly>
         </x-n>
         <x-m>
           <x-m-di></x-m-di>
@@ -509,36 +537,6 @@ export default function Component() {
         <x-n>
           <x-a></x-a>
           <x-ly>ни</x-ly>
-          <x-mel a h></x-mel>
-        </x-n>
-        <x-n>
-          <x-i></x-i>
-          <x-kl></x-kl>
-          <x-ly>це</x-ly>
-        </x-n>
-        <x-m>
-          <x-m-di></x-m-di>
-          <x-m-sc-di></x-m-sc-di>
-        </x-m>
-        <x-n>
-          <x-i></x-i>
-          <x-ly>Бо</x-ly>
-          <x-mel a h></x-mel>
-        </x-n>
-        <x-n>
-          <x-o></x-o>
-          <x-ly>го</x-ly>
-          <x-mel a h></x-mel>
-        </x-n>
-        <x-n>
-          <x-bar-s></x-bar-s>
-          <x-p></x-p>
-          <x-ly>ро</x-ly>
-          <x-mel a h></x-mel>
-        </x-n>
-        <x-n>
-          <x-e></x-e>
-          <x-ly>ди</x-ly>
           <x-mel a h></x-mel>
         </x-n>
         <x-n>
