@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import { NavLink, useParams } from 'react-router-dom'
 import Chant, { Preview } from '../chant'
 import chants from '../chants'
@@ -123,7 +124,7 @@ function CollectionMenu({
     li: HTMLLIElement
   }>()
 
-  return (
+  return ReactDOM.createPortal(
     <div
       className={styles['collection-menu']}
       onPointerLeave={() => setDraggedItem(undefined)}
@@ -196,12 +197,13 @@ function CollectionMenu({
           onClose={() => setChantsMenu(false)}
         />
       )}
-    </div>
+    </div>,
+    document.getElementById('root')!
   )
 }
 
 function ChantsMenu({ onAdd, onClose }: { onAdd: (index: number) => void; onClose: () => void }) {
-  return (
+  return ReactDOM.createPortal(
     <div className={styles['chants-menu']}>
       <ul className={listStyles.list}>
         {chants
@@ -226,6 +228,7 @@ function ChantsMenu({ onAdd, onClose }: { onAdd: (index: number) => void; onClos
           Затвори
         </span>
       </div>
-    </div>
+    </div>,
+    document.getElementById('root')!
   )
 }
