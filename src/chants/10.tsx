@@ -370,11 +370,8 @@ export default function Component() {
           <x-mel a h></x-mel>
         </x-n>
         <x-n>
-          <x-k></x-k>
-        </x-n>
-        <x-n>
-          <x-o></x-o>
-          <x-anti></x-anti>
+          <x-ok></x-ok>
+          <x-psi></x-psi>
         </x-n>
         <x-n>
           <x-a></x-a>
