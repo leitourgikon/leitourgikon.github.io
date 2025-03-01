@@ -61,6 +61,7 @@ declare namespace React {
       'x-m-delta-aa': any
       'x-m-di': any
       'x-m-ga': any
+      'x-m-ke': any
       'x-m-ke-low': any
       'x-m-legetos': any
       'x-m-nana': any
@@ -75,15 +76,18 @@ declare namespace React {
       'x-mode-di': any
       'x-mode-first': any
       'x-mode-fourth': any
+      'x-mode-ga': any
       'x-mode-ni': any
       'x-mode-pa': any
       'x-mode-plagal': any
       'x-mode-plagal-first': any
       'x-mode-plagal-fourth': any
       'x-mode-second': any
+      'x-mode-third-nana': any
       'x-mode-word-echos': any
       'x-n': any
       'x-o': any
+      'x-o-a': any
       'x-o-a-k': any
       'x-o-e-k': any
       'x-o-i': any
@@ -115,6 +119,7 @@ declare namespace React {
       'x-t6': any
       'x-var': any
       'x-y': any
+      'x-yf-g': any
       'x-yf2': any
       'x-yfen-below': any
     }

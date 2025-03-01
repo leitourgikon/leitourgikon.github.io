@@ -1,7 +1,7 @@
 import styles from './echos.module.sass'
 
 export type Echos = {
-  mode: 1 | 2 | 21 | 4
+  mode: 1 | 2 | 3 | 21 | 4
   plagal?: true
   base: 'pa' | 'ga' | 'di' | 'ni'
 }
@@ -15,6 +15,7 @@ export default function Component({ mode, plagal, base }: Echos) {
           1: plagal ? <x-mode-plagal-first /> : <x-mode-first />,
           21: plagal ? null : <x-mode-second />,
           2: plagal ? null : <x-mode-second />,
+          3: plagal ? null : <x-mode-third-nana />,
           4: plagal ? <x-mode-plagal-fourth /> : <x-mode-fourth />,
         }[mode]
       }
@@ -27,12 +28,15 @@ export default function Component({ mode, plagal, base }: Echos) {
               <x-f-sc-di className="byz--f" />
             </>
           ),
-          ga: (
-            <>
-              <x-o3 />
-              <x-f-d-ni-low />
-            </>
-          ),
+          ga:
+            mode === 3 ? (
+              <x-mode-ga />
+            ) : (
+              <>
+                <x-o3 />
+                <x-f-d-ni-low />
+              </>
+            ),
           ni: <x-mode-ni />,
         }[base]
       }
