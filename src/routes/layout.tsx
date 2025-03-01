@@ -30,6 +30,16 @@ export default function Layout() {
       <main className={styles.main}>
         <Outlet />
       </main>
+      <footer className={styles.footer}>
+        <div>
+          Сайтът използва <a href="https://danielgarthur.github.io/byzhtml/">byzhtml</a> генериран
+          от{' '}
+          <span className={styles.neanes}>
+            <a href="https://neanes.github.io/neanes/">Neanes</a>
+            <x-mode-second />
+          </span>
+        </div>
+      </footer>
     </>
   )
 }

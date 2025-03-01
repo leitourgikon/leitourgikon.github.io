@@ -41,3 +41,32 @@
     padding: 24px
   @media (min-width: 680px + 2*24px + 1px)
     padding: 24px 0
+
+.footer
+  font-size: 0.819rem
+  font-weight: 550
+  color: white
+  background: maroon
+  max-width: 768px
+  width: 100%
+  margin-top: auto
+  div
+    a
+      font-weight: 700
+      font-style: italic
+    .neanes
+      display: inline-flex
+      overflow: hidden
+      > x-mode-second
+        text-decoration: none
+        margin-bottom: -100%
+        font-weight: 400
+        --byz-neume-font-size: 1.024rem
+
+  @media (max-width: 480px)
+    padding: 8px 16px
+  @media (min-width: 481px) and (max-width: 768px)
+    padding: 8px 24px
+  @media (min-width: 768px + 1px)
+    border-radius: 4px 4px 0 0
+    padding: 8px 24px
