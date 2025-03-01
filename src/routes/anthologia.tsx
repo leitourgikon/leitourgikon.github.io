@@ -144,7 +144,8 @@ function CollectionMenu({
               const y = e.clientY
 
               // same element
-              if (li.offsetTop <= y && y <= li.offsetTop + li.clientHeight) return
+              const offset = e.pointerType === 'touch' ? 4 : e.pointerType === 'pen' ? 2 : 0
+              if (li.offsetTop <= y + offset && y - offset <= li.offsetTop + li.clientHeight) return
 
               // next element
               if (li.offsetTop + li.clientHeight < y) {
