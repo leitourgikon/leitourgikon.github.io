@@ -1,11 +1,11 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import orthodoxCrossUrl from '../assets/orthodox-cross.svg?no-inline'
-import './layout.sass'
+import styles from './layout.module.sass'
 
 export default function Layout() {
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <nav>
           <ul>
             <li>
@@ -27,7 +27,7 @@ export default function Layout() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main className={styles.main}>
         <Outlet />
       </main>
     </>

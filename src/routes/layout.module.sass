@@ -1,5 +1,7 @@
-header
+.header
   max-width: 768px
+  width: 100%
+
   > nav
     font-size: 1.024rem
     font-family: Ysabeau SC
@@ -29,3 +31,13 @@ header
             border-radius: 0 0 2px 0
           @media (min-width: 768px + 1px)
             border-radius: 0 0 2px 2px
+
+.main
+  max-width: 680px
+  width: 100%
+  @media (max-width: 480px)
+    padding: 16px
+  @media (min-width: 481px) and (max-width: 680px + 2*24px)
+    padding: 24px
+  @media (min-width: 680px + 2*24px + 1px)
+    padding: 24px 0
