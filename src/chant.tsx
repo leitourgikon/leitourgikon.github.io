@@ -1,6 +1,6 @@
 import React from 'react'
 import { OUSYNODOS_WARNING } from './constants'
-import type { Echos } from './echos'
+import EchosComponent, { type Echos } from './echos'
 import styles from './chant.module.sass'
 
 export type Chant = {
@@ -16,6 +16,14 @@ export type Chant = {
   echos: Echos
   ousynodos?: true
   content: React.LazyExoticComponent<() => React.JSX.Element>
+}
+
+export function Preview({ author, title, echos }: Chant) {
+  return (
+    <>
+      {title}, <EchosComponent echos={echos} />, {author}
+    </>
+  )
 }
 
 export default function Component({ title, ousynodos, content }: Chant) {

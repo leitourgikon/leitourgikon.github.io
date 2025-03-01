@@ -1,8 +1,7 @@
 import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-import Chant from '../chant'
+import Chant, { Preview } from '../chant'
 import chants from '../chants'
-import Echos from '../echos'
 import styles from './anthologia.module.sass'
 import listStyles from '../list.module.sass'
 
@@ -160,8 +159,7 @@ function CollectionMenu({
             }}
           >
             <div>
-              {chants[index].title}, <Echos echos={chants[index].echos} />,{' '}
-              {chants[index].author}
+              <Preview {...chants[index]} />
             </div>
             <span
               role="button"
@@ -225,7 +223,7 @@ function ChantsMenu({
                   onClose()
                 }}
               >
-                {chant.title}, <Echos echos={chant.echos} />, {chant.author}
+                <Preview {...chant} />
               </span>
             </li>
           ))}

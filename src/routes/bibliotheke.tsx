@@ -1,9 +1,8 @@
 import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-import Chant from '../chant'
+import Chant, { Preview } from '../chant'
 import chants from '../chants'
 import { OUSYNODOS_WARNING } from '../constants'
-import Echos from '../echos'
 import styles from './bibliotheke.module.sass'
 import listStyles from '../list.module.sass'
 
@@ -25,7 +24,7 @@ export default function Component() {
             .map(({ chant, index }) => (
               <li key={index}>
                 <NavLink to={index.toString()}>
-                  {chant.title}, <Echos echos={chant.echos} />, {chant.author}
+                  <Preview {...chant} />
                 </NavLink>
                 {chant.ousynodos && (
                   <span className={styles.ousynodos} title={OUSYNODOS_WARNING}>
