@@ -10,7 +10,12 @@ export default function Layout() {
           <ul>
             <li>
               <NavLink to="/">
-                <img src={orthodoxCrossUrl} />
+                <img
+                  width={38}
+                  height={50}
+                  src={orthodoxCrossUrl}
+                  alt="Служебник - заглавна страница"
+                />
               </NavLink>
             </li>
             <li>
