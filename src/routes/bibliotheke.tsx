@@ -25,7 +25,7 @@ export default function Component() {
             .map(({ chant, index }) => (
               <li key={index}>
                 <NavLink to={index.toString()}>
-                  {chant.title}, <Echos {...chant.echos} />, {chant.author}
+                  {chant.title}, <Echos echos={chant.echos} />, {chant.author}
                 </NavLink>
                 {chant.ousynodos && (
                   <span className={styles.ousynodos} title={OUSYNODOS_WARNING}>

@@ -160,7 +160,7 @@ function CollectionMenu({
             }}
           >
             <div>
-              {chants[index].title}, <Echos {...chants[index].echos} />,{' '}
+              {chants[index].title}, <Echos echos={chants[index].echos} />,{' '}
               {chants[index].author}
             </div>
             <span
@@ -225,7 +225,7 @@ function ChantsMenu({
                   onClose()
                 }}
               >
-                {chant.title}, <Echos {...chant.echos} />, {chant.author}
+                {chant.title}, <Echos echos={chant.echos} />, {chant.author}
               </span>
             </li>
           ))}

@@ -1,51 +1,72 @@
 import styles from './echos.module.sass'
 
-export type Echos = {
-  mode: 1 | 2 | 3 | 21 | 4
-  plagal?: true
-  base: 'pa' | 'ga' | 'di' | 'ni'
-}
+export type Echos =
+  | 'protos'
+  | 'pl-protou'
+  | 'deuteros'
+  | 'deuteroprotos'
+  | 'tritos'
+  | 'tetartos'
+  | 'pl-tetartou'
+  | 'pl-tetartou-ga'
 
-export default function Component({ mode, plagal, base }: Echos) {
+export default function Component({ echos }: { echos: Echos }) {
   return (
     <span className={styles.echos}>
-      {plagal && <x-mode-plagal />}
+      {echos.startsWith('pl-') && <x-mode-plagal />}
       {
         {
-          1: plagal ? <x-mode-plagal-first /> : <x-mode-first />,
-          21: plagal ? null : <x-mode-second />,
-          2: plagal ? null : <x-mode-second />,
-          3: plagal ? null : <x-mode-third-nana />,
-          4: plagal ? <x-mode-plagal-fourth /> : <x-mode-fourth />,
-        }[mode]
-      }
-      {
-        {
-          pa: <x-mode-pa />,
-          di: (
+          protos: (
             <>
+              <x-mode-first />
+              <x-mode-pa />
+            </>
+          ),
+          'pl-protou': <x-mode-plagal-first />,
+          deuteros: (
+            <>
+              <x-mode-second />
               <x-mode-di />
               <x-f-sc-di className="byz--f" />
             </>
           ),
-          ga:
-            mode === 3 ? (
+          deuteroprotos: (
+            <>
+              <x-mode-second />
+              <x-mode-di />
+              <x-f-sc-di className="byz--f" />
+              (<x-ea />
+              <x-f-d-pa-b />)
+            </>
+          ),
+          tritos: (
+            <>
+              <x-mode-third-nana />
               <x-mode-ga />
-            ) : (
-              <>
-                <x-o3 />
-                <x-f-d-ni-low />
-              </>
-            ),
-          ni: <x-mode-ni />,
-        }[base]
+            </>
+          ),
+          tetartos: (
+            <>
+              <x-mode-fourth />
+              <x-mode-di />
+              <x-f-sc-di className="byz--f" />
+            </>
+          ),
+          'pl-tetartou': (
+            <>
+              <x-mode-plagal-fourth />
+              <x-mode-ni />
+            </>
+          ),
+          'pl-tetartou-ga': (
+            <>
+              <x-mode-plagal-fourth />
+              <x-o3 />
+              <x-f-d-ni-low />
+            </>
+          ),
+        }[echos]
       }
-      {mode === 21 && (
-        <>
-          (<x-ea></x-ea>
-          <x-f-d-pa-b></x-f-d-pa-b>)
-        </>
-      )}
     </span>
   )
 }
