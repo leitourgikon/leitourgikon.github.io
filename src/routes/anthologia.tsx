@@ -59,6 +59,9 @@ export default function Component() {
   ) : (
     <div className={styles.collection}>
       <h2>{collections[index].title}</h2>
+      <span role="button" onClick={() => setCollectionMenu(true)}>
+        Редактирай
+      </span>
       <ul>
         {collections[index].content.map((index) => (
           <li key={index}>
@@ -66,6 +69,19 @@ export default function Component() {
           </li>
         ))}
       </ul>
+      {collectionMenu && (
+        <CollectionMenu
+          collection={collections[index]}
+          onClose={() => setCollectionMenu(false)}
+          onSave={(collection) =>
+            setCollections([
+              ...collections.slice(0, index),
+              collection,
+              ...collections.slice(index + 1),
+            ])
+          }
+        />
+      )}
     </div>
   )
 }
@@ -89,14 +105,16 @@ function setLocalStorageCollections(collections: Collection[]) {
 }
 
 function CollectionMenu({
+  collection,
   onClose,
   onSave,
 }: {
+  collection?: Collection
   onClose: () => void
   onSave: (collection: Collection) => void
 }) {
-  const [title, setTitle] = React.useState('Нов сборник')
-  const [collection, setCollection] = React.useState<number[]>([])
+  const [title, setTitle] = React.useState(collection?.title ?? 'Нов сборник')
+  const [content, setContent] = React.useState<number[]>(collection?.content ?? [])
   const [chantsMenu, setChantsMenu] = React.useState(false)
 
   const [draggedItem, setDraggedItem] = React.useState<{
@@ -115,7 +133,7 @@ function CollectionMenu({
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} autoFocus />
       </h4>
       <ul className={listStyles.list}>
-        {collection.map((index, i) => (
+        {content.map((index, i) => (
           <li
             key={`${index}-${i}`}
             aria-pressed={draggedItem?.index === i}
@@ -136,18 +154,18 @@ function CollectionMenu({
 
               const ix = Math.min(draggedItem.index, i)
               setDraggedItem({ ...draggedItem, index: i })
-              setCollection([
-                ...collection.slice(0, ix),
-                collection[ix + 1],
-                collection[ix],
-                ...collection.slice(ix + 2),
+              setContent([
+                ...content.slice(0, ix),
+                content[ix + 1],
+                content[ix],
+                ...content.slice(ix + 2),
               ])
             }}
           >
             <div>
               <Preview {...chants[index]} />
             </div>
-            <span role="button" onClick={() => setCollection(collection.filter((_, j) => j !== i))}>
+            <span role="button" onClick={() => setContent(content.filter((_, j) => j !== i))}>
               -
             </span>
           </li>
@@ -165,7 +183,7 @@ function CollectionMenu({
         <span
           role="button"
           onClick={() => {
-            onSave({ title, content: collection })
+            onSave({ title, content })
             onClose()
           }}
         >
@@ -174,7 +192,7 @@ function CollectionMenu({
       </div>
       {chantsMenu && (
         <ChantsMenu
-          onAdd={(index) => setCollection([...collection, index])}
+          onAdd={(index) => setContent([...content, index])}
           onClose={() => setChantsMenu(false)}
         />
       )}

@@ -57,7 +57,13 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)
         transition: box-shadow 0.15s ease
 
-.collection > ul
+.collection
   display: flex
   flex-direction: column
-  gap: 30px
+  h2 + span[role="button"]
+    align-self: end
+    margin-bottom: 30px
+  > ul
+    display: flex
+    flex-direction: column
+    gap: 30px
