@@ -44,9 +44,10 @@
 
 .collection-menu
   > ul
-    touch-action: none
     &:active
       cursor: move
+    > li
+      touch-action: none
     > li:first-child:not(:last-child)
       margin-top: 8px
     > li:not(:last-child)

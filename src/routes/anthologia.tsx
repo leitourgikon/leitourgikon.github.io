@@ -118,17 +118,14 @@ function CollectionMenu({
   const [content, setContent] = React.useState<number[]>(collection?.content ?? [])
   const [chantsMenu, setChantsMenu] = React.useState(false)
 
-  const [draggedItem, setDraggedItem] = React.useState<{
-    index: number
-    height: number
-    li: HTMLLIElement
-  }>()
+  const [draggedItemIndex, setDraggedItemIndex] = React.useState<number>()
+  const draggedItemRef = React.useRef<HTMLLIElement>(null)
 
   return ReactDOM.createPortal(
     <div
       className={styles['collection-menu']}
-      onPointerLeave={() => setDraggedItem(undefined)}
-      onPointerUp={() => setDraggedItem(undefined)}
+      onPointerLeave={() => setDraggedItemIndex(undefined)}
+      onPointerUp={() => setDraggedItemIndex(undefined)}
     >
       <h4>
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} autoFocus />
@@ -136,31 +133,48 @@ function CollectionMenu({
       <ul className={listStyles.list}>
         {content.map((index, i) => (
           <li
+            ref={draggedItemIndex === i ? draggedItemRef : undefined}
             key={`${index}-${i}`}
-            aria-pressed={draggedItem?.index === i}
-            onPointerDown={(e) =>
-              setDraggedItem({
-                index: i,
-                height: e.currentTarget.clientHeight,
-                li: e.currentTarget,
-              })
-            }
+            aria-pressed={draggedItemIndex === i}
+            onPointerDown={() => setDraggedItemIndex(i)}
             onPointerMove={(e) => {
-              if (draggedItem === undefined || draggedItem.index === i) return
-              const targetY = e.clientY - e.currentTarget.getBoundingClientRect().top
-              const offset = e.currentTarget.clientHeight - draggedItem.height
+              if (draggedItemIndex === undefined) return
+              const li = draggedItemRef.current
+              if (li === null) return
+              const y = e.clientY
 
-              if (draggedItem.index < i && targetY < offset) return
-              if (draggedItem.index > i && offset > 0 && targetY > draggedItem.height) return
+              // same element
+              if (li.offsetTop <= y && y <= li.offsetTop + li.clientHeight) return
 
-              const ix = Math.min(draggedItem.index, i)
-              setDraggedItem({ ...draggedItem, index: i })
-              setContent([
-                ...content.slice(0, ix),
-                content[ix + 1],
-                content[ix],
-                ...content.slice(ix + 2),
-              ])
+              // next element
+              if (li.offsetTop + li.clientHeight < y) {
+                const next = li.nextElementSibling
+                if (next === null) return
+                if (y < li.offsetTop + next.clientHeight) return
+                setDraggedItemIndex(draggedItemIndex + 1)
+
+                setContent([
+                  ...content.slice(0, draggedItemIndex),
+                  content[draggedItemIndex + 1],
+                  content[draggedItemIndex],
+                  ...content.slice(draggedItemIndex + 2),
+                ])
+              }
+
+              // previous element
+              if (y < li.offsetTop) {
+                const previous = li.previousElementSibling
+                if (previous === null) return
+                if (li.offsetTop - previous.clientHeight + li.clientHeight < y) return
+                setDraggedItemIndex(draggedItemIndex - 1)
+
+                setContent([
+                  ...content.slice(0, draggedItemIndex - 1),
+                  content[draggedItemIndex],
+                  content[draggedItemIndex - 1],
+                  ...content.slice(draggedItemIndex + 1),
+                ])
+              }
             }}
           >
             <div>
