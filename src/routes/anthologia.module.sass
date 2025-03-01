@@ -1,4 +1,4 @@
-.collection, .chants
+.collection-menu, .chants-menu
   background: white
   border-radius: 4px 0 0 4px
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)
@@ -38,7 +38,7 @@
       &:hover
         color: maroon
 
-.collections, .collection
+.collections, .collection-menu
   > ul
     > li:not(:last-child) > span[role="button"]
       padding: 5px
@@ -47,7 +47,7 @@
     > li:last-child:not(:first-child)
       margin-top: 8px
 
-.collection
+.collection-menu
   > ul
     touch-action: none
     &:active
@@ -62,7 +62,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1)
         transition: box-shadow 0.15s ease
 
-.anthologion
+.collection > ul
   display: flex
   flex-direction: column
   gap: 30px

@@ -57,16 +57,16 @@ export default function Component() {
       )}
     </div>
   ) : (
-    <>
+    <div className={styles.collection}>
       <h2>{collections[index].title}</h2>
-      <ul className={styles.anthologion}>
+      <ul>
         {collections[index].content.map((index) => (
           <li key={index}>
             <Chant {...chants[index]} />
           </li>
         ))}
       </ul>
-    </>
+    </div>
   )
 }
 
@@ -107,7 +107,7 @@ function CollectionMenu({
 
   return (
     <div
-      className={styles.collection}
+      className={styles['collection-menu']}
       onPointerLeave={() => setDraggedItem(undefined)}
       onPointerUp={() => setDraggedItem(undefined)}
     >
@@ -184,7 +184,7 @@ function CollectionMenu({
 
 function ChantsMenu({ onAdd, onClose }: { onAdd: (index: number) => void; onClose: () => void }) {
   return (
-    <div className={styles.chants}>
+    <div className={styles['chants-menu']}>
       <ul className={listStyles.list}>
         {chants
           .map((chant, index) => ({ chant, index }))
