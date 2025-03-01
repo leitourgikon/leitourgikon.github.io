@@ -13,8 +13,7 @@ type Collection = {
 export default function Component() {
   const { collection } = useParams()
   const index = React.useMemo(
-    () =>
-      collection && !isNaN(Number(collection)) ? Number(collection) : null,
+    () => (collection && !isNaN(Number(collection)) ? Number(collection) : null),
     [collection]
   )
   const [collections, setCollections] = React.useState<Collection[]>(() =>
@@ -38,9 +37,7 @@ export default function Component() {
               <span
                 role="button"
                 title={`Изтрий сборника „${collection.title}“`}
-                onClick={() =>
-                  setCollections(collections.filter((_, i) => i !== index))
-                }
+                onClick={() => setCollections(collections.filter((_, i) => i !== index))}
               >
                 -
               </span>
@@ -115,12 +112,7 @@ function CollectionMenu({
       onPointerUp={() => setDraggedItem(undefined)}
     >
       <h4>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          autoFocus
-        />
+        <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} autoFocus />
       </h4>
       <ul className={listStyles.list}>
         {collection.map((index, i) => (
@@ -136,17 +128,11 @@ function CollectionMenu({
             }
             onPointerMove={(e) => {
               if (draggedItem === undefined || draggedItem.index === i) return
-              const targetY =
-                e.clientY - e.currentTarget.getBoundingClientRect().top
+              const targetY = e.clientY - e.currentTarget.getBoundingClientRect().top
               const offset = e.currentTarget.clientHeight - draggedItem.height
 
               if (draggedItem.index < i && targetY < offset) return
-              if (
-                draggedItem.index > i &&
-                offset > 0 &&
-                targetY > draggedItem.height
-              )
-                return
+              if (draggedItem.index > i && offset > 0 && targetY > draggedItem.height) return
 
               const ix = Math.min(draggedItem.index, i)
               setDraggedItem({ ...draggedItem, index: i })
@@ -161,12 +147,7 @@ function CollectionMenu({
             <div>
               <Preview {...chants[index]} />
             </div>
-            <span
-              role="button"
-              onClick={() =>
-                setCollection(collection.filter((_, j) => j !== i))
-              }
-            >
+            <span role="button" onClick={() => setCollection(collection.filter((_, j) => j !== i))}>
               -
             </span>
           </li>
@@ -201,13 +182,7 @@ function CollectionMenu({
   )
 }
 
-function ChantsMenu({
-  onAdd,
-  onClose,
-}: {
-  onAdd: (index: number) => void
-  onClose: () => void
-}) {
+function ChantsMenu({ onAdd, onClose }: { onAdd: (index: number) => void; onClose: () => void }) {
   return (
     <div className={styles.chants}>
       <ul className={listStyles.list}>
