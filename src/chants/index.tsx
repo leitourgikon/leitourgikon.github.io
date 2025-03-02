@@ -88,6 +88,14 @@ const chants: Chant[] = [
     ousynodos: true,
     content: React.lazy(() => import('./11')),
   },
+  {
+    author: 'Григориос Протопсалт',
+    title: 'Достойно е',
+    type: 'axion-estin',
+    echos: 'tritos',
+    ousynodos: true,
+    content: React.lazy(() => import('./12')),
+  },
 ]
 
 export default chants

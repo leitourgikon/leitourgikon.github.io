@@ -23,6 +23,7 @@ declare namespace React {
       'x-ea': any
       'x-et-c': any
       'x-f-agem': any
+      'x-f-agem-b': any
       'x-f-d-di': any
       'x-f-d-di-b': any
       'x-f-d-ga': any
@@ -33,10 +34,12 @@ declare namespace React {
       'x-f-d-pa': any
       'x-f-d-pa-b': any
       'x-f-d-zo-b': any
+      'x-f-hc-pa': any
       'x-f-sc-di': any
       'x-f-sc-ke-b': any
       'x-g': any
       'x-g-2': any
+      'x-g-b': any
       'x-gd': any
       'x-gg': any
       'x-ggd': any
@@ -44,6 +47,7 @@ declare namespace React {
       'x-i': any
       'x-ii-di': any
       'x-ii-ga': any
+      'x-ii-ke': any
       'x-ii-ni': any
       'x-ii-pa': any
       'x-ii-vou': any
@@ -72,6 +76,7 @@ declare namespace React {
       'x-m-sc-di': any
       'x-m-vou': any
       'x-m-vou-high': any
+      'x-m-zo-high': any
       'x-mel': any
       'x-mode-di': any
       'x-mode-first': any
