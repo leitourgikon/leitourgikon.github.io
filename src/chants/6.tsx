@@ -395,7 +395,7 @@ export default function Component() {
         <x-n>
           <x-var></x-var>
           <x-i></x-i>
-          <x-ly>Май</x-ly>
+          <x-ly>май</x-ly>
           <x-mel a h></x-mel>
         </x-n>
         <x-n>
