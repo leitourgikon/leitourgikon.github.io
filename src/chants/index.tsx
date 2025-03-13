@@ -96,6 +96,14 @@ const chants: Chant[] = [
     ousynodos: true,
     content: React.lazy(() => import('./12')),
   },
+  {
+    author: 'Прингос',
+    title: 'Събезначалното Слово',
+    type: 'apolytikion',
+    echos: 'pl-protou-ke',
+    ousynodos: true,
+    content: React.lazy(() => import('./13')),
+  },
 ]
 
 export default chants

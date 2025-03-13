@@ -82,7 +82,9 @@ declare namespace React {
       'x-mode-first': any
       'x-mode-fourth': any
       'x-mode-ga': any
+      'x-mode-ke': any
       'x-mode-ni': any
+      'x-mode-oligon-ypsili': any
       'x-mode-pa': any
       'x-mode-plagal': any
       'x-mode-plagal-first': any

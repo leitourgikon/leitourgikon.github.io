@@ -3,6 +3,7 @@ import styles from './echos.module.sass'
 export type Echos =
   | 'protos'
   | 'pl-protou'
+  | 'pl-protou-ke'
   | 'deuteros'
   | 'deuteroprotos'
   | 'tritos'
@@ -23,6 +24,13 @@ export default function Component({ echos }: { echos: Echos }) {
             </>
           ),
           'pl-protou': <x-mode-plagal-first />,
+          'pl-protou-ke': (
+            <>
+              <x-mode-plagal-first />
+              <x-mode-ke></x-mode-ke>
+              <x-mode-oligon-ypsili></x-mode-oligon-ypsili>
+            </>
+          ),
           deuteros: (
             <>
               <x-mode-second />
