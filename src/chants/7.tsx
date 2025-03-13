@@ -5,8 +5,10 @@ export default function Component() {
         <x-mode-word-echos></x-mode-word-echos>
         <x-mode-plagal></x-mode-plagal>
         <x-mode-plagal-fourth></x-mode-plagal-fourth>
-        <x-o3></x-o3>
-        <x-f-d-ni-low></x-f-d-ni-low>
+        <x-n>
+          <x-o3></x-o3>
+          <x-f-d-ni-low></x-f-d-ni-low>
+        </x-n>
       </div>
       <div className="byz--text-box">Прингос</div>
       <div className="byz--neume-paragraph">

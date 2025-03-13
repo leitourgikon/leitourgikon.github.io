@@ -27,24 +27,34 @@ export default function Component({ echos }: { echos: Echos }) {
           'pl-protou-ke': (
             <>
               <x-mode-plagal-first />
-              <x-mode-ke></x-mode-ke>
-              <x-mode-oligon-ypsili></x-mode-oligon-ypsili>
+              <x-n>
+                <x-mode-ke />
+                <x-mode-oligon-ypsili />
+              </x-n>
             </>
           ),
           deuteros: (
             <>
               <x-mode-second />
-              <x-mode-di />
-              <x-f-sc-di className="byz--f" />
+              <x-n>
+                <x-mode-di />
+                <x-f-sc-di className="byz--f" />
+              </x-n>
             </>
           ),
           deuteroprotos: (
             <>
               <x-mode-second />
-              <x-mode-di />
-              <x-f-sc-di className="byz--f" />
-              (<x-ea />
-              <x-f-d-pa-b />)
+              <x-n>
+                <x-mode-di />
+                <x-f-sc-di className="byz--f" />
+              </x-n>
+              (
+              <x-n>
+                <x-ea />
+                <x-f-d-pa-b />
+              </x-n>
+              )
             </>
           ),
           tritos: (
@@ -56,8 +66,10 @@ export default function Component({ echos }: { echos: Echos }) {
           tetartos: (
             <>
               <x-mode-fourth />
-              <x-mode-di />
-              <x-f-sc-di className="byz--f" />
+              <x-n>
+                <x-mode-di />
+                <x-f-sc-di className="byz--f" />
+              </x-n>
             </>
           ),
           'pl-tetartou': (
@@ -69,8 +81,10 @@ export default function Component({ echos }: { echos: Echos }) {
           'pl-tetartou-ga': (
             <>
               <x-mode-plagal-fourth />
-              <x-o3 />
-              <x-f-d-ni-low />
+              <x-n>
+                <x-o3 />
+                <x-f-d-ni-low />
+              </x-n>
             </>
           ),
         }[echos]

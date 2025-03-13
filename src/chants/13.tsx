@@ -5,8 +5,10 @@ export default function Component() {
         <x-mode-word-echos></x-mode-word-echos>
         <x-mode-plagal></x-mode-plagal>
         <x-mode-plagal-first></x-mode-plagal-first>
-        <x-mode-ke></x-mode-ke>
-        <x-mode-oligon-ypsili></x-mode-oligon-ypsili>
+        <x-n>
+          <x-mode-ke></x-mode-ke>
+          <x-mode-oligon-ypsili></x-mode-oligon-ypsili>
+        </x-n>
       </div>
       <div className="byz--neume-paragraph">
         <x-dc>С</x-dc>

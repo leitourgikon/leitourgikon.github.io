@@ -4,8 +4,10 @@ export default function Component() {
       <div className="byz--mode-key">
         <x-mode-word-echos></x-mode-word-echos>
         <x-mode-second></x-mode-second>
-        <x-mode-di></x-mode-di>
-        <x-f-sc-di className="byz--f"></x-f-sc-di>
+        <x-n>
+          <x-mode-di></x-mode-di>
+          <x-f-sc-di className="byz--f"></x-f-sc-di>
+        </x-n>
       </div>
       <div className="byz--text-box">Прингос</div>
       <div className="byz--neume-paragraph">
