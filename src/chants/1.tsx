@@ -55,6 +55,7 @@ export default function Component() {
           <x-dg className="byz--g"></x-dg>
         </x-n>
         <x-n>
+          <x-bar-th-s></x-bar-th-s>
           <x-i></x-i>
           <x-kl></x-kl>
           <x-ly>луй</x-ly>
@@ -114,6 +115,7 @@ export default function Component() {
           <x-g className="byz--g"></x-g>
         </x-n>
         <x-n>
+          <x-bar-th-s></x-bar-th-s>
           <x-o></x-o>
           <x-kl></x-kl>
           <x-ly>луй</x-ly>
@@ -164,6 +166,7 @@ export default function Component() {
           <x-dg className="byz--g"></x-dg>
         </x-n>
         <x-n>
+          <x-bar-th-s></x-bar-th-s>
           <x-i></x-i>
           <x-kl></x-kl>
           <x-ly>луй</x-ly>
@@ -216,6 +219,7 @@ export default function Component() {
           <x-a></x-a>
         </x-n>
         <x-n>
+          <x-bar-th-s></x-bar-th-s>
           <x-a></x-a>
           <x-kl></x-kl>
           <x-ly>луй</x-ly>
@@ -267,6 +271,7 @@ export default function Component() {
           <x-e></x-e>
         </x-n>
         <x-n>
+          <x-bar-th-s></x-bar-th-s>
           <x-a></x-a>
           <x-kl></x-kl>
           <x-ly>луй</x-ly>
@@ -314,6 +319,7 @@ export default function Component() {
           <x-i></x-i>
         </x-n>
         <x-n>
+          <x-bar-th-s></x-bar-th-s>
           <x-a></x-a>
           <x-kl></x-kl>
           <x-ly>луй</x-ly>
