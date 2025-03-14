@@ -8,6 +8,7 @@ export type Echos =
   | 'deuteroprotos'
   | 'tritos'
   | 'tetartos'
+  | 'agia'
   | 'pl-tetartou'
   | 'pl-tetartou-ga'
 
@@ -69,6 +70,15 @@ export default function Component({ echos }: { echos: Echos }) {
               <x-n>
                 <x-mode-di />
                 <x-f-sc-di className="byz--f" />
+              </x-n>
+            </>
+          ),
+          agia: (
+            <>
+              <x-mode-fourth />
+              <x-n>
+                <x-mode-di />
+                <x-f-d-di />
               </x-n>
             </>
           ),
