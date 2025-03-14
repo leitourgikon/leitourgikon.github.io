@@ -6,7 +6,7 @@ import styles from './chant.module.sass'
 export type Chant = {
   author: string
   title: string
-  type: 'antifonon' | 'apolytikion' | 'axion-estin' | 'kontakion' | 'litany' | 'trisagion'
+  type?: 'antifonon' | 'apolytikion' | 'axion-estin' | 'kontakion' | 'litany' | 'trisagion'
   echos: Echos
   ousynodos?: true
   content: React.LazyExoticComponent<() => React.JSX.Element>
