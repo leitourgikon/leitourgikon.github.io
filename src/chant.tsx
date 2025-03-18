@@ -4,7 +4,7 @@ import EchosComponent, { type Echos } from './echos'
 import styles from './chant.module.sass'
 
 export type Chant = {
-  author: string
+  author?: string
   title: string
   type?: 'antifonon' | 'apolytikion' | 'axion-estin' | 'kontakion' | 'litany' | 'trisagion'
   echos: Echos
@@ -15,7 +15,8 @@ export type Chant = {
 export function Preview({ author, title, echos }: Chant) {
   return (
     <>
-      {title}, <EchosComponent echos={echos} />, {author}
+      {title}, <EchosComponent echos={echos} />
+      {author && <>, {author}</>}
     </>
   )
 }
