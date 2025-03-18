@@ -41,14 +41,6 @@ const chants: Chant[] = [
     content: React.lazy(() => import('./5')),
   },
   {
-    author: 'Станицас',
-    title: 'Достойно е',
-    type: 'axion-estin',
-    echos: 'deuteroprotos',
-    ousynodos: true,
-    content: React.lazy(() => import('./6')),
-  },
-  {
     author: 'Прингос',
     title: 'Със светиите упокой',
     type: 'kontakion',
