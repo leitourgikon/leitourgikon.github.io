@@ -7,7 +7,7 @@ export default function Component() {
         <x-mode-plagal-first></x-mode-plagal-first>
         <x-mode-pa></x-mode-pa>
       </div>
-      <div className="byz--text-box">Прингос</div>
+      <div className="my-byz--text my-byz--author">Прингос</div>
       <div className="byz--neume-paragraph">
         <x-dc>Х</x-dc>
         <x-n>
@@ -271,7 +271,7 @@ export default function Component() {
           <x-m-delta-aa></x-m-delta-aa>
         </x-m>
       </div>
-      <div className="byz--text-box my-byz--description">краят е такъв</div>
+      <div className="my-byz--text my-byz--description">краят е такъв</div>
       <div className="byz--neume-paragraph">
         <x-m>
           <x-m-di></x-m-di>

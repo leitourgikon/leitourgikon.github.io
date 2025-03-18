@@ -6,7 +6,7 @@ export default function Component() {
         <x-mode-first salt="1"></x-mode-first>
         <x-mode-pa></x-mode-pa>
       </div>
-      <div className="byz--text-box">Прингос</div>
+      <div className="my-byz--text my-byz--author">Прингос</div>
       <div className="byz--neume-paragraph">
         <x-dc>С</x-dc>
         <x-n>

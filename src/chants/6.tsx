@@ -14,7 +14,7 @@ export default function Component() {
         </x-n>
         )
       </div>
-      <div className="byz--text-box">Станицас</div>
+      <div className="my-byz--text my-byz--author">Станицас</div>
       <div className="byz--neume-paragraph">
         <x-dc>Д</x-dc>
         <x-n>

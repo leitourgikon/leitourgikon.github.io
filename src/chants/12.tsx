@@ -6,7 +6,7 @@ export default function Component() {
         <x-mode-third-nana></x-mode-third-nana>
         <x-mode-ga></x-mode-ga>
       </div>
-      <div className="byz--text-box">Григориос Протопсалт</div>
+      <div className="my-byz--text my-byz--author">Григориос Протопсалт</div>
       <div className="byz--neume-paragraph">
         <x-dc>Д</x-dc>
         <x-n>

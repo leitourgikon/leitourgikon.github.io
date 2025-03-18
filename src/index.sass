@@ -90,18 +90,23 @@ x-ly
   font-weight: 620
   color: black
 
-.byz--text-box
+.my-byz--text
   font-size: 1.024rem
-  font-weight: 600
-  font-style: italic
-  text-align: right
+  font-weight: 550
   color: black
 
-.byz--text-box.my-byz--description
-  text-align: left
+  &.my-byz--author, &.my-byz--note
+    font-weight: 600
+    font-style: italic
+    text-align: right
 
-.byz--text-box.my-byz--note
-  font-size: 0.819rem
+  &.my-byz--description
+    font-weight: 600
+    font-style: italic
+
+  &.my-byz--note
+    font-weight: 620
+    font-size: 0.819rem
 
 .byz--mode-key
   text-align: center

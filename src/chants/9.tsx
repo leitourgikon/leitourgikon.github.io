@@ -7,7 +7,7 @@ export default function Component() {
         <x-mode-plagal-fourth></x-mode-plagal-fourth>
         <x-mode-ni></x-mode-ni>
       </div>
-      <div className="byz--text-box">Петрос Ламбадариос</div>
+      <div className="my-byz--text my-byz--author">Петрос Ламбадариос</div>
       <div className="byz--neume-paragraph">
         <x-dc>A</x-dc>
         <x-n>

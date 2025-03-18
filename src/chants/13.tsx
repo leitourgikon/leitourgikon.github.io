@@ -10,7 +10,7 @@ export default function Component() {
           <x-mode-oligon-ypsili></x-mode-oligon-ypsili>
         </x-n>
       </div>
-      <div className="byz--text-box">Прингос</div>
+      <div className="my-byz--text my-byz--author">Прингос</div>
       <div className="byz--neume-paragraph">
         <x-dc>С</x-dc>
         <x-n>

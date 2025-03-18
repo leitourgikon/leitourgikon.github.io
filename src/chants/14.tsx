@@ -9,7 +9,7 @@ export default function Component() {
           <x-f-sc-di className="byz--f"></x-f-sc-di>
         </x-n>
       </div>
-      <div className="byz--text-box">Прогакис</div>
+      <div className="my-byz--text my-byz--author">Прогакис</div>
       <div className="byz--neume-paragraph">
         <x-dc> Щ</x-dc>
         <x-n>
