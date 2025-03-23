@@ -1,7 +1,5 @@
 import React from 'react'
-import { OUSYNODOS_WARNING } from './constants'
 import EchosComponent, { type Echos } from './echos'
-import styles from './chant.module.sass'
 
 export type Chant = {
   author?: string
@@ -21,10 +19,9 @@ export function Preview({ author, title, echos }: Chant) {
   )
 }
 
-export default function Component({ title, ousynodos, content }: Chant) {
+export default function Component({ title, content }: Chant) {
   return (
     <>
-      {ousynodos && <div className={styles.ousynodos}>{OUSYNODOS_WARNING}</div>}
       <h3>{title}</h3>
       <React.Suspense fallback={<div>Зареждане...</div>}>
         {React.createElement(content, {})}

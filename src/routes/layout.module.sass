@@ -1,6 +1,9 @@
 .header
   max-width: 768px
   width: 100%
+  display: flex
+  flex-direction: column
+  gap: 1px
 
   > nav
     font-size: 1.024rem
@@ -31,6 +34,17 @@
             border-radius: 0 0 2px 0
           @media (min-width: 768px + 1px)
             border-radius: 0 0 2px 2px
+
+  > .ousynodos
+    font-size: 0.819rem
+    font-weight: 550
+    font-style: italic
+    background: maroon
+    color: white
+    padding: 4px 12px
+
+    @media (min-width: 768px + 1px)
+      border-radius: 2px
 
 .main
   max-width: 680px

@@ -26,6 +26,9 @@ export default function Layout() {
             </li>
           </ul>
         </nav>
+        <div className={styles.ousynodos}>
+          Преводите не са синодални и не е препоръчително да се използват за богослужебни цели.
+        </div>
       </header>
       <main className={styles.main}>
         <Outlet />

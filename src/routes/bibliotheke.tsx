@@ -2,8 +2,6 @@ import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import Chant, { Preview } from '../chant'
 import chants from '../chants'
-import { OUSYNODOS_WARNING } from '../constants'
-import styles from './bibliotheke.module.sass'
 import listStyles from '../list.module.sass'
 
 export default function Component() {
@@ -26,11 +24,6 @@ export default function Component() {
                 <NavLink to={index.toString()}>
                   <Preview {...chant} />
                 </NavLink>
-                {chant.ousynodos && (
-                  <span className={styles.ousynodos} title={OUSYNODOS_WARNING}>
-                    не-СП
-                  </span>
-                )}
               </li>
             ))}
         </ul>
