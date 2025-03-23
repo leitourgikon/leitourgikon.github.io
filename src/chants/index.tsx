@@ -113,6 +113,7 @@ const chants: Chant[] = [
   {
     title: 'Господи на силите',
     echos: 'tritos',
+    ousynodos: true,
     content: React.lazy(() => import('./16')),
   },
   {
