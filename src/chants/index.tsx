@@ -115,6 +115,12 @@ const chants: Chant[] = [
     echos: 'tritos',
     content: React.lazy(() => import('./16')),
   },
+  {
+    title: 'Спаси, Господи',
+    echos: 'protos',
+    ousynodos: true,
+    content: React.lazy(() => import('./17')),
+  },
 ]
 
 export default chants
