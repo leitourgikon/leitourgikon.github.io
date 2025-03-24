@@ -7,6 +7,7 @@ export type Echos =
   | 'deuteros'
   | 'deuteroprotos'
   | 'tritos'
+  | 'varys-ga'
   | 'tetartos'
   | 'agia'
   | 'pl-tetartou'
@@ -61,6 +62,12 @@ export default function Component({ echos }: { echos: Echos }) {
           tritos: (
             <>
               <x-mode-third-nana />
+              <x-mode-ga />
+            </>
+          ),
+          'varys-ga': (
+            <>
+              <x-mode-varys />
               <x-mode-ga />
             </>
           ),

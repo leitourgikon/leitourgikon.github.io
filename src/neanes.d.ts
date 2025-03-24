@@ -91,6 +91,7 @@ declare namespace React {
       'x-mode-plagal-fourth': any
       'x-mode-second': any
       'x-mode-third-nana': any
+      'x-mode-varys': any
       'x-mode-word-echos': any
       'x-n': any
       'x-o': any
