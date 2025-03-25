@@ -124,6 +124,7 @@ declare namespace React {
       'x-stavros': any
       'x-tripli': any
       'x-t2': any
+      'x-t3': any
       'x-t4': any
       'x-t6': any
       'x-var': any
