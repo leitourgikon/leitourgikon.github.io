@@ -1,3 +1,5 @@
+import Ending from '../ending'
+
 export default function Component() {
   return (
     <div>
@@ -271,7 +273,7 @@ export default function Component() {
           <x-m-delta-aa></x-m-delta-aa>
         </x-m>
       </div>
-      <div className="my-byz--text my-byz--description">краят е такъв</div>
+      <Ending />
       <div className="byz--neume-paragraph">
         <x-m>
           <x-m-di></x-m-di>
