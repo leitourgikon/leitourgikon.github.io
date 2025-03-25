@@ -136,6 +136,13 @@ const chants: Chant[] = [
     ousynodos: true,
     content: React.lazy(() => import('./19')),
   },
+  {
+    author: 'Георгиос Редестинос',
+    title: 'На Теб, Поборнице',
+    echos: 'pl-tetartou',
+    ousynodos: true,
+    content: React.lazy(() => import('./20')),
+  },
 ]
 
 export default chants
