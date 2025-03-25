@@ -92,7 +92,10 @@ export default function Component({ echos }: { echos: Echos }) {
           'pl-tetartou': (
             <>
               <x-mode-plagal-fourth />
-              <x-mode-ni />
+              <x-n>
+                <x-mode-ni />
+                <x-f-d-ni-low className="byz--f" />
+              </x-n>
             </>
           ),
           'pl-tetartou-ga': (

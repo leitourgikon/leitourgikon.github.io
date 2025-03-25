@@ -5,7 +5,10 @@ export default function Component() {
         <x-mode-word-echos></x-mode-word-echos>
         <x-mode-plagal></x-mode-plagal>
         <x-mode-plagal-fourth></x-mode-plagal-fourth>
-        <x-mode-ni></x-mode-ni>
+        <x-m>
+          <x-m-ni></x-m-ni>
+          <x-m-delta></x-m-delta>
+        </x-m>
       </div>
       <div className="my-byz--text my-byz--author">Петрос Ламбадариос</div>
       <div className="byz--neume-paragraph">
