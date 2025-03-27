@@ -25,7 +25,15 @@ export default function Component({ echos }: { echos: Echos }) {
               <x-mode-pa />
             </>
           ),
-          'pl-protou': <x-mode-plagal-first />,
+          'pl-protou': (
+            <>
+              <x-mode-plagal-first />
+              <x-n>
+                <x-mode-pa />
+                <x-f-d-pa className="byz--f"></x-f-d-pa>
+              </x-n>
+            </>
+          ),
           'pl-protou-ke': (
             <>
               <x-mode-plagal-first />
