@@ -7,9 +7,11 @@ export default function Component() {
         <x-mode-word-echos></x-mode-word-echos>
         <x-mode-plagal></x-mode-plagal>
         <x-mode-plagal-first></x-mode-plagal-first>
-        <x-mode-pa></x-mode-pa>
+        <x-n>
+          <x-mode-pa></x-mode-pa>
+          <x-f-d-pa className="byz--f"></x-f-d-pa>
+        </x-n>
       </div>
-      <div className="my-byz--text my-byz--author">Прингос</div>
       <div className="byz--neume-paragraph">
         <x-dc>Х</x-dc>
         <x-n>
@@ -43,7 +45,6 @@ export default function Component() {
           <x-a></x-a>
         </x-n>
         <x-n>
-          <x-var></x-var>
           <x-a></x-a>
           <x-ly>на</x-ly>
         </x-n>
@@ -86,7 +87,7 @@ export default function Component() {
         <x-n>
           <x-bar-s></x-bar-s>
           <x-p2></x-p2>
-          <x-f-agem className="byz--f"></x-f-agem>
+          <x-yf2></x-yf2>
           <x-ly>смърт</x-ly>
         </x-n>
         <x-n>
@@ -98,11 +99,11 @@ export default function Component() {
         </x-n>
         <x-n>
           <x-i></x-i>
+          <x-ly>смърт</x-ly>
+          <x-mel a h></x-mel>
         </x-n>
         <x-n>
           <x-a></x-a>
-          <x-ly>смърт</x-ly>
-          <x-mel a h></x-mel>
         </x-n>
         <x-n>
           <x-bar-s></x-bar-s>
@@ -120,9 +121,7 @@ export default function Component() {
         </x-n>
         <x-n>
           <x-a></x-a>
-        </x-n>
-        <x-n>
-          <x-i></x-i>
+          <x-kl></x-kl>
           <x-ly>по</x-ly>
           <x-mel a h></x-mel>
         </x-n>
@@ -137,7 +136,6 @@ export default function Component() {
         </x-n>
         <x-n>
           <x-o></x-o>
-          <x-anti></x-anti>
         </x-n>
         <x-n>
           <x-bar-s></x-bar-s>
@@ -164,6 +162,7 @@ export default function Component() {
           <x-ly>и</x-ly>
         </x-n>
         <x-n>
+          <x-var></x-var>
           <x-a></x-a>
           <x-ly>на</x-ly>
         </x-n>
@@ -172,14 +171,10 @@ export default function Component() {
         </x-n>
         <x-n>
           <x-bar-s></x-bar-s>
-          <x-var></x-var>
-          <x-a></x-a>
-          <x-om-c></x-om-c>
+          <x-p-a></x-p-a>
+          <x-kl-b></x-kl-b>
           <x-ly>те</x-ly>
           <x-mel a h></x-mel>
-        </x-n>
-        <x-n>
-          <x-i></x-i>
         </x-n>
         <x-n>
           <x-var></x-var>
@@ -188,15 +183,13 @@ export default function Component() {
         </x-n>
         <x-n>
           <x-a></x-a>
-          <x-ly>в'гро</x-ly>
-          <x-mel a h></x-mel>
         </x-n>
         <x-n>
           <x-bar-s></x-bar-s>
           <x-ok></x-ok>
           <x-gd className="byz--g"></x-gd>
           <x-yfen-below></x-yfen-below>
-          <x-ly>бо</x-ly>
+          <x-ly>в'гро</x-ly>
           <x-mel a h></x-mel>
         </x-n>
         <x-n>
@@ -204,16 +197,18 @@ export default function Component() {
         </x-n>
         <x-n>
           <x-a></x-a>
-          <x-ly>ве</x-ly>
+          <x-ly>бо</x-ly>
           <x-mel a h></x-mel>
         </x-n>
         <x-n>
           <x-a></x-a>
+          <x-ly>ве</x-ly>
+          <x-mel a h></x-mel>
         </x-n>
         <x-n>
           <x-bar-s></x-bar-s>
           <x-a></x-a>
-          <x-dipli></x-dipli>
+          <x-kl></x-kl>
           <x-ly>те</x-ly>
         </x-n>
         <x-m>
@@ -226,27 +221,27 @@ export default function Component() {
           <x-mel a h></x-mel>
         </x-n>
         <x-n>
+          <x-k></x-k>
+        </x-n>
+        <x-n>
           <x-bar-s></x-bar-s>
-          <x-var></x-var>
-          <x-o></x-o>
-          <x-om-c></x-om-c>
+          <x-i></x-i>
+          <x-kl></x-kl>
           <x-ly>вот</x-ly>
         </x-n>
         <x-n>
-          <x-i></x-i>
-        </x-n>
-        <x-n>
           <x-a></x-a>
-        </x-n>
-        <x-n>
-          <x-o></x-o>
           <x-ly>да</x-ly>
           <x-mel a h></x-mel>
+        </x-n>
+        <x-n>
+          <x-k></x-k>
         </x-n>
         <x-n>
           <x-bar-s></x-bar-s>
           <x-o-i-k></x-o-i-k>
           <x-gd className="byz--g"></x-gd>
+          <x-yf2></x-yf2>
           <x-yfen-below></x-yfen-below>
           <x-ly>ру</x-ly>
           <x-mel a h></x-mel>
@@ -280,14 +275,18 @@ export default function Component() {
           <x-m-delta-aa></x-m-delta-aa>
         </x-m>
         <x-n>
-          <x-o></x-o>
+          <x-i></x-i>
           <x-ly>да</x-ly>
           <x-mel a h></x-mel>
+        </x-n>
+        <x-n>
+          <x-k></x-k>
         </x-n>
         <x-n>
           <x-bar-s></x-bar-s>
           <x-o-i-k></x-o-i-k>
           <x-gd className="byz--g"></x-gd>
+          <x-yf2></x-yf2>
           <x-yfen-below></x-yfen-below>
           <x-ly>ру</x-ly>
           <x-mel a h></x-mel>
@@ -334,12 +333,12 @@ export default function Component() {
           <x-g className="byz--g"></x-g>
         </x-n>
         <x-n>
+          <x-bar-s></x-bar-s>
           <x-a></x-a>
           <x-kl></x-kl>
           <x-ii-ni className="byz--ii"></x-ii-ni>
         </x-n>
         <x-n>
-          <x-bar-s-a></x-bar-s-a>
           <x-ko></x-ko>
           <x-om></x-om>
           <x-argon className="byz--g"></x-argon>

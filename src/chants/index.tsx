@@ -49,7 +49,6 @@ const chants: Chant[] = [
     content: React.lazy(() => import('./7')),
   },
   {
-    author: 'Прингос',
     title: 'Христос възкръсна',
     type: 'apolytikion',
     echos: 'pl-protou',
